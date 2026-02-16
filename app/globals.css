@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Calibri, 'Trebuchet MS', sans-serif; /* Body ke liye Calibri */
+}
+
+h1, h2,h3, h4, h5 {
+  font-family: 'Poppins',; /* Sirf headings ke liye PT Serif */
+}

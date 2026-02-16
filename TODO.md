@@ -1,0 +1,2 @@
+- [x] Add data-aos="flip-left" to each blog article in RecentBlogsSection.tsx
+- [x] Initialize AOS in RecentBlogsSection.tsx to enable animations

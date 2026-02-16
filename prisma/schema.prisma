@@ -1,0 +1,288 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  contact       String?
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String
+  role          Role      @default(USER)
+  region        Region?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model Account {
+  id                       String  @id @default(cuid())
+  userId                   String
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String?
+  access_token             String?
+  expires_at               Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String?
+  session_state            String?
+  refresh_token_expires_in Int?
+  user                     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model NavbarItem {
+  id           String         @id @default(cuid())
+  label        String
+  href         String?
+  order        Int            @default(0)
+  type         NavbarItemType @default(LINK)
+  pageType     NavbarPageType @default(GENERIC)
+  isLoginLink  Boolean        @default(false)
+  isActive     Boolean        @default(true)
+  region       Region         @default(INDIA)
+  parentId     String?
+  groupLabel   String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  parent       NavbarItem?    @relation("NavbarHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children     NavbarItem[]   @relation("NavbarHierarchy")
+  pageHeroes   PageHero?
+  servicePages ServicePage?
+  genericPage  GenericPage?
+
+  @@unique([region, label], map: "NavbarItem_region_label_unique")
+  @@index([region, parentId, order])
+}
+
+model MediaAsset {
+  id         String   @id @default(cuid())
+  url        String
+  alt        String?
+  mimeType   String
+  width      Int?
+  height     Int?
+  region     Region   @default(INDIA)
+  uploadedBy String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model PageHero {
+  id           String        @id @default(cuid())
+  navbarItemId String        @unique
+  region       Region        @default(INDIA)
+  title        String
+  subtitle     String?
+  description  String?
+  content      Json
+  status       ContentStatus @default(DRAFT)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  navbarItem   NavbarItem    @relation(fields: [navbarItemId], references: [id], onDelete: Cascade)
+
+  @@unique([navbarItemId, region])
+  @@index([region, status])
+}
+
+model ServicePage {
+  id           String               @id @default(cuid())
+  navbarItemId String               @unique
+  region       Region               @default(INDIA)
+  status       ContentStatus        @default(DRAFT)
+  createdAt    DateTime             @default(now())
+  updatedAt    DateTime             @updatedAt
+  navbarItem   NavbarItem           @relation(fields: [navbarItemId], references: [id], onDelete: Cascade)
+  sections     ServicePageSection[]
+
+  @@unique([navbarItemId, region])
+  @@index([region, status])
+}
+
+model ServicePageSection {
+  id            String      @id @default(cuid())
+  servicePageId String
+  title         String
+  content       String
+  order         Int         @default(1)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  servicePage   ServicePage @relation(fields: [servicePageId], references: [id], onDelete: Cascade)
+
+  @@index([servicePageId, order])
+}
+
+model ServicePageFAQ {
+  id           String               @id @default(cuid())
+  navbarItemId String               @unique
+  region       Region               @default(INDIA)
+  status       ContentStatus        @default(DRAFT)
+  createdAt    DateTime             @default(now())
+  updatedAt    DateTime             @updatedAt
+  questions    ServicePageFAQItem[]
+
+  @@unique([navbarItemId, region])
+  @@index([region, status])
+}
+
+/// This model represents a single FAQ question-answer item.
+model ServicePageFAQItem {
+  id        String         @id @default(cuid())
+  faqId     String
+  question  String
+  answer    String
+  order     Int            @default(0)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  faq       ServicePageFAQ @relation(fields: [faqId], references: [id], onDelete: Cascade)
+
+  @@index([faqId, order])
+}
+
+/// Blog Group - Groups blogs together (e.g., "Company Registration", "Tax Tips")
+model BlogGroup {
+  id        String   @id @default(cuid())
+  name      String
+  region    Region   @default(INDIA)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  blogs     Blog[]
+
+  @@unique([name, region], map: "BlogGroup_name_region_unique")
+  @@index([region, order])
+}
+
+/// Blog Author - Authors who write blog posts
+model BlogAuthor {
+  id          String   @id @default(cuid())
+  name        String
+  image       String?
+  description String?
+  region      Region   @default(INDIA)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  blogs       Blog[]
+
+  @@index([region])
+}
+
+/// Blog Post - Individual blog posts
+model Blog {
+  id          String        @id @default(cuid())
+  slug        String?
+  title       String
+  image       String?
+  content     String
+  blogGroupId String
+  authorId    String?
+  readTime    String?
+  viewCount   Int           @default(0)
+  region      Region        @default(INDIA)
+  status      ContentStatus @default(DRAFT)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  author      BlogAuthor?   @relation(fields: [authorId], references: [id])
+  blogGroup   BlogGroup     @relation(fields: [blogGroupId], references: [id], onDelete: Cascade)
+
+  @@unique([slug, region])
+  @@index([region, status])
+  @@index([blogGroupId])
+  @@index([authorId])
+}
+
+
+/// Meta Data - Stores SEO meta tags and JSON-LD for any page
+model MetaData {
+  id        String       @id @default(cuid())
+  pageType  MetaPageType
+  pageId    String
+  metaBlock String
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  @@unique([pageType, pageId])
+  @@index([pageType, pageId])
+}
+
+model GenericPage {
+  id           String        @id @default(cuid())
+  navbarItemId String?       @unique
+  region       Region        @default(INDIA)
+  title        String
+  content      Json
+  status       ContentStatus @default(DRAFT)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  navbarItem   NavbarItem?   @relation(fields: [navbarItemId], references: [id], onDelete: Cascade)
+
+  @@unique([navbarItemId, region])
+  @@index([region, status])
+}
+
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum Region {
+  INDIA
+  US
+}
+
+enum NavbarItemType {
+  LINK
+  DROPDOWN
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum PageKey {
+  HOME
+  ABOUT
+}
+
+enum NavbarPageType {
+  SERVICE
+  GENERIC
+}
+
+enum MetaPageType {
+  SERVICE
+  BLOG
+  GENERIC
+}
