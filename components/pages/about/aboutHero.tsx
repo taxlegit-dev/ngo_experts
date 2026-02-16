@@ -36,12 +36,12 @@ export default function AboutCompanyHero() {
               Home
             </Link>
             <span className="mx-2">››</span>
-            <span className="text-white">About Company</span>
+            <span className="text-white">About Ngo Experts</span>
           </nav>
 
           {/* Heading */}
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-            About Company
+            About Ngo Experts
           </h1>
         </div>
       </div>

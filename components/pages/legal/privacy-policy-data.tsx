@@ -32,7 +32,7 @@ export const privacyPolicyData = {
       title: "Information We Collect",
       expandable: true,
       content: (
-        <div className="space-y-6">
+        <div className="space-y-6 text-black">
           <p className="text-gray-700">
             We collect information necessary to deliver seamless tax and
             compliance services. This includes:
@@ -222,8 +222,11 @@ export const privacyPolicyData = {
         href: "mailto:121@NGO Experts.com",
       },
       { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
-      { title: "Website", value: "NGO Experts.com", href: "https://NGO Experts.com" },
+      {
+        title: "Website",
+        value: "NGO Experts.com",
+        href: "https://NGO Experts.com",
+      },
     ],
   },
 };
-

@@ -34,7 +34,7 @@ export default function AboutUsSection() {
             <div className="absolute right-1 -top-16 z-20 rounded-2xl bg-lime-500 px-6 py-4 text-center text-white shadow-lg">
               <p className="text-sm font-medium">Trusted by</p>
               <p className="text-xl font-bold">10,000+</p>
-              <p className="text-sm">Businesses</p>
+              <p className="text-sm">NGO&apos;s</p>
             </div>
           </div>
 
@@ -50,11 +50,20 @@ export default function AboutUsSection() {
             </h2>
 
             <p className="mb-6 text-slate-700">
-              At <strong>NGO Experts</strong>, we help startups, NRIs, foreign investors, Section 8 companies, and businesses across India grow with confidence. We provide expert guidance in company registration, compliance, taxation, accounting, licensing, and intellectual property protection.
+              At <strong>NGO Experts</strong>, we help startups, NRIs, foreign
+              investors, Section 8 companies, and businesses across India grow
+              with confidence. We provide expert guidance in company
+              registration, compliance, taxation, accounting, licensing, and
+              intellectual property protection.
             </p>
 
             <p className="mb-6 text-slate-700">
-              Our services are trusted by professionals, corporates, foundations, international donors, educational institutions, healthcare organizations, and global investors. With 20+ years of experience and strong industry partnerships, we make business setup and compliance  simple, reliable, and efficient, so you can focus on growing your business.
+              Our services are trusted by professionals, corporates,
+              foundations, international donors, educational institutions,
+              healthcare organizations, and global investors. With 20+ years of
+              experience and strong industry partnerships, we make business
+              setup and compliance simple, reliable, and efficient, so you can
+              focus on growing your business.
             </p>
 
             {/* KEY SERVICES */}

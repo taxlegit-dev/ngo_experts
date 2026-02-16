@@ -2,7 +2,6 @@
 import AOS from "aos";
 import { useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 export default function RunningLogoCarousel() {
   useEffect(() => {
     AOS.init({
@@ -31,7 +30,7 @@ export default function RunningLogoCarousel() {
       data-aos="fade-up"
     >
       {/* Soft background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F7F2F7] via-[#EFE4EF] to-white" />
+      <div className="absolute inset-0 bg-white" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Heading */}

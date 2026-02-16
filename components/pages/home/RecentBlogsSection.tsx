@@ -54,7 +54,7 @@ export default function RecentBlogsSection() {
   }, []);
 
   return (
-    <section className="w-full py-8 md:py-16 lg:py-20">
+    <section className=" bg-white w-full py-8 md:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto lg:px-0 px-5">
         {/* Heading */}
         <div className="text-center mb-12 md:mb-16">

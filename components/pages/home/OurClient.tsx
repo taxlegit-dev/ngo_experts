@@ -24,7 +24,7 @@ export default function OurClients() {
   ];
 
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="bg-white py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2
           className="text-4xl md:text-5xl font-extrabold text-slate-900"
