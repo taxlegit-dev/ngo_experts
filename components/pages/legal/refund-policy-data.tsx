@@ -120,10 +120,10 @@ export const refundPolicyData = {
           <p className="text-gray-700">
             Email:{" "}
             <a
-              href="mailto:121@NGO Experts.com"
+              href="mailto:support@ngoexperts.com"
               className="text-lime-500 underline"
             >
-              121@NGO Experts.com
+              support@ngoexperts.com
             </a>{" "}
             | Phone:{" "}
             <a href="tel:+918929218091" className="text-lime-500 underline">
@@ -227,8 +227,8 @@ export const refundPolicyData = {
     items: [
       {
         title: "Email",
-        value: "121@NGO Experts.com",
-        href: "mailto:121@NGO Experts.com",
+        value: "support@ngoexperts.com",
+        href: "mailto:support@ngoexperts.com",
       },
       {
         title: "Phone",

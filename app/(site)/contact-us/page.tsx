@@ -106,7 +106,7 @@ export default function AboutCompanyHero() {
                   <div>
                     <p className="text-sm text-gray-500">Mail Us</p>
                     <p className="font-semibold text-gray-900">
-                      121@ngoexperts.com
+                      support@ngoexperts.com
                     </p>
                   </div>
                 </div>

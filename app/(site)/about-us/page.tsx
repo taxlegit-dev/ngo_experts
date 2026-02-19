@@ -4,6 +4,7 @@ import WhyChooseUs from "@/components/pages/about/whyUs";
 import HowItWork from "@/components/pages/home/HowWeWorkSection";
 // import Ceo from "@/components/pages/about/ceo";
 import RecentBlogsSection from "@/components/pages/home/RecentBlogsSection";
+// import WhyChooseTaxlegit from "@/components/pages/home/WhyTaxlegit";
 import Footer from "@/components/footer";
 import AboutUsSection from "@/components/pages/about/AboutTaxlegit";
 export default function AboutPage() {
@@ -16,6 +17,7 @@ export default function AboutPage() {
         <WhyChooseUs />
         <HowItWork />
         {/* <Ceo /> */}
+        {/* <WhyChooseTaxlegit /> */}
         <RecentBlogsSection />
         <Footer />
       </div>

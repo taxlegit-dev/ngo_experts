@@ -1,9 +1,7 @@
 "use client";
 import {
   FaInstagram,
-  FaTwitter,
   FaFacebookF,
-  FaYoutube,
   FaLinkedinIn,
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -17,30 +15,48 @@ import Image from "next/image";
 const Footer = () => {
   const popularRegistration = [
     {
-      name: "Private Limited Company",
-      href: "private-limited-company-registration",
+      name: "NGO Registration",
+      href: "/ngo-registration",
     },
     {
-      name: "One Person company Registration",
-      href: "one-person-company-registration",
+      name: "12A and 80G Registration",
+      href: "/12a-and-80g-registration",
     },
     {
-      name: "Section 8 Company Registration",
-      href: "section-8-company-registration",
+      name: "CSR-1",
+      href: "/csr-1",
     },
-    { name: "Company Registration In India", href: "/company-registration" },
     {
-      name: "Public Limited Company",
-      href: "public-limited-company-registration",
+      name: "Trust Registration",
+      href: "/trust-registration",
+    },
+    {
+      name: "Section 8 Registration",
+      href: "/section-8-registration",
+    },
+    {
+      name: "Society Registration",
+      href: "/society-registration",
+    },
+    {
+      name: "Niti Aayog Registration",
+      href: "/niti-aayog-registration",
+    },
+    {
+      name: "FCRA Registration",
+      href: "/fcra-registration",
+    },
+    {
+      name: "Trademark Registration",
+      href: "/trademark-registration-ngo",
     },
   ];
 
   const popularLicenses = [
-    { name: "GST Registration", href: "gst-registration" },
-    { name: "Startup India Registration", href: "startupindia-registration" },
-    { name: "ISO Registration", href: "iso-registration" },
-    { name: "FSSAI Registration", href: "fssai-registration" },
-    { name: "MSME Registratio", href: "msme-registration" },
+    { name: "Blog", href: "/blogs" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Term & Conditions", href: "/term-and-conditions" },
   ];
 
   const companyLinks = [
@@ -58,33 +74,21 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaInstagram />,
-      href: "https://www.instagram.com/taxlegit_/",
+      href: "https://www.instagram.com/ngoexperts/",
       label: "Instagram",
       color: "hover:bg-lime-500",
     },
     {
-      icon: <FaTwitter />,
-      href: "https://x.com/taxlegit",
-      label: "Twitter",
-      color: "hover:bg-green-500",
-    },
-    {
       icon: <FaFacebookF />,
-      href: "https://www.facebook.com/Taxlegitt/",
+      href: "https://www.facebook.com/people/Ngoexperts/100091412370524/",
       label: "Facebook",
       color: "hover:bg-green-700",
     },
     {
       icon: <FaLinkedinIn />,
-      href: "https://www.linkedin.com/company/taxlegitt/",
+      href: "https://www.linkedin.com/company/ngo-experts/",
       label: "LinkedIn",
       color: "hover:bg-green-700",
-    },
-    {
-      icon: <FaYoutube />,
-      href: "https://www.youtube.com/channel/UC4s7kcn1qt7np_Ccce5hmHA",
-      label: "YouTube",
-      color: "hover:bg-red-600",
     },
   ];
 
@@ -140,11 +144,11 @@ const Footer = () => {
               {/* RIGHT BUTTON */}
               <div className="mt-6 md:mt-0 flex-shrink-0 w-full md:w-auto px-4 md:px-0">
                 <a
-                  href="https://wa.me/918929218091"
+                  href="https://wa.me/918810445899"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative w-full md:w-auto
-    bg-white text-purple-700 font-bold
+    bg-white text-[#61C100] font-bold
     px-4 lg:px-8 py-2 lg:py-4 rounded-lg md:rounded-xl
     shadow-lg hover:shadow-2xl
     transition-all duration-300
@@ -163,7 +167,7 @@ const Footer = () => {
               className="
         absolute -bottom-4 left-1/2 transform -translate-x-1/2
         w-3/4 h-8
-        bg-gradient-to-t from-purple-900/30 to-transparent
+        bg-gradient-to-t from-[#61C100]/30 to-transparent
         rounded-full
         blur-md
       "
@@ -180,7 +184,7 @@ const Footer = () => {
               <div className="lg:col-span-2 space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-4">
-                    NGO<span className="text-purple-400"> Experts</span>
+                    NGO<span className="text-[#61C100]"> Experts</span>
                   </h2>
                   <p className="text-gray-400 leading-relaxed max-w-md">
                     Your trusted partner for business registrations, compliance,
@@ -192,31 +196,28 @@ const Footer = () => {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <a
-                      href="tel:+918929218091"
-                      className="flex items-center gap-3 text-white hover:text-purple-400 transition-colors"
+                      href="tel:+918595766812"
+                      className="flex items-center gap-3 text-white hover:text-[#61C100] transition-colors"
                     >
-                      <FaPhoneAlt className="text-purple-400" />
-                      <span>+91 89292 18091</span>
+                      <FaPhoneAlt className="text-[#61C100]" />
+                      <span>+91 8595766812</span>
                     </a>
                     <a
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=121@ngoexperts.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-white hover:text-purple-400 transition-colors"
+                      href="mailto:support@ngoexperts.com"
+                      className="flex items-center gap-3 text-white hover:text-[#61C100] transition-colors"
                     >
-                      <FaEnvelope className="text-purple-400" />
-                      <span>121@ngoexperts.com</span>
+                      <FaEnvelope className="text-[#61C100]" />
+                      <span>support@ngoexperts.com</span>
                     </a>
                   </div>
                   <div className="flex items-start gap-3">
-                    <FaMapMarkerAlt className="text-purple-400 mt-1 flex-shrink-0" />
+                    <FaMapMarkerAlt className="text-[#61C100] mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-white">
                         Registered Office
                       </p>
                       <p className="text-gray-400 text-sm">
-                        office no. - 1117 , 11th floor, Supertech Astralis,
-                        Sector-94,
+                        1117, Supertech Astralis, Sector-94,
                         <br />
                         Noida, Uttar Pradesh - 201301
                       </p>
@@ -244,8 +245,8 @@ const Footer = () => {
 
               {/* Popular Registration */}
               <div className="space-y-6">
-                <h3 className="text-lg font-semibold text-white border-l-4 border-purple-500 pl-3">
-                  Popular Registration
+                <h3 className="text-lg font-semibold text-white border-l-4 border-[#61C100] pl-3">
+                  Services
                 </h3>
                 <ul className="space-y-3">
                   {popularRegistration.map((item, index) => (
@@ -254,7 +255,7 @@ const Footer = () => {
                         href={item.href}
                         className="group flex items-center text-gray-400 hover:text-white transition-colors duration-300"
                       >
-                        <FaChevronRight className="mr-2 text-purple-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <FaChevronRight className="mr-2 text-[#61C100] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
                         <span>{item.name}</span>
                       </a>
                     </li>
@@ -265,7 +266,7 @@ const Footer = () => {
               {/* Popular Licenses */}
               <div className="space-y-6 ">
                 <h3 className="text-lg font-semibold text-white border-l-4 border-cyan-500 pl-3">
-                  Popular Licenses
+                  Other Services
                 </h3>
                 <ul className="space-y-3">
                   {popularLicenses.map((item, index) => (
@@ -285,7 +286,7 @@ const Footer = () => {
               {/* Quick Links */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-lg font-semibold text-white border-l-4 border-purple-400 pl-3">
+                  <h3 className="text-lg font-semibold text-white border-l-4 border-[#61C100] pl-3">
                     Company
                   </h3>
                   <ul className="space-y-3 mt-4">
@@ -295,7 +296,7 @@ const Footer = () => {
                           href={item.href}
                           className="group flex items-center text-gray-400 hover:text-white transition-colors duration-300"
                         >
-                          <FaChevronRight className="mr-2 text-purple-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <FaChevronRight className="mr-2 text-[#61C100] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
                           <span>{item.name}</span>
                         </a>
                       </li>
@@ -352,7 +353,7 @@ const Footer = () => {
         <div className="fixed left-6 bottom-6 z-50 flex flex-col gap-4">
           {/* WhatsApp */}
           <a
-            href="https://wa.me/918929218091"
+            href="https://wa.me/918810445899"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 bg-green-500 rounded-full text-white shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300"
@@ -367,7 +368,7 @@ const Footer = () => {
 
           {/* Phone Call */}
           <a
-            href="tel:+918929218091"
+            href="tel:+918810445899"
             className="group relative flex items-center justify-center w-10 h-10 lg:w-14 lg:h-14 bg-blue-500 rounded-full text-white shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300"
             aria-label="Call Us"
           >

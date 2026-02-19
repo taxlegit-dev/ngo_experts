@@ -54,12 +54,12 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
         className={`rounded-2xl border transition-all duration-500 overflow-hidden
           ${
             isIndia
-              ? "bg-white border-purple-200 hover:border-purple-400"
-              : "bg-slate-800/50 backdrop-blur-xl border-slate-600 hover:border-purple-500"
+              ? "bg-white border-slate-200 hover:border-lime-400"
+              : "bg-slate-900/70 backdrop-blur-xl border-slate-700 hover:border-lime-500"
           }
           ${
             isOpen
-              ? "shadow-2xl scale-[1.02] ring-2 ring-purple-500/50"
+              ? "shadow-2xl scale-[1.02] ring-2 ring-lime-500/40"
               : "shadow-md hover:shadow-xl"
           }
           transform hover:scale-[1.01]
@@ -73,7 +73,7 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
             className={`text-lg font-semibold leading-tight transition-colors ${
               isIndia
                 ? "text-slate-900 group-hover:text-lime-500"
-                : "text-white group-hover:text-purple-300"
+                : "text-white group-hover:text-lime-300"
             }`}
           >
             {item.question}
@@ -83,8 +83,8 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
             className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-500 flex-shrink-0 ml-4
               ${
                 isIndia
-                  ? "bg-purple-100 text-lime-500 group-hover:bg-lime-500 group-hover:text-white"
-                  : "bg-purple-500/20 text-purple-300 group-hover:bg-green-500 group-hover:text-white"
+                  ? "bg-lime-100 text-green-700 group-hover:bg-lime-500 group-hover:text-white"
+                  : "bg-lime-500/15 text-lime-300 group-hover:bg-lime-500 group-hover:text-white"
               }
               ${isOpen ? "rotate-180 scale-110" : ""}
             `}
@@ -114,7 +114,7 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
             className={`px-6 pb-5 prose max-w-none ${
               isIndia
                 ? "prose-slate text-slate-700"
-                : "prose-invert prose-slate text-slate-300"
+                : "prose-invert prose-slate text-slate-200"
             }`}
             dangerouslySetInnerHTML={{ __html: item.answer }}
           />
@@ -155,15 +155,15 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
       <section
         className={`py-16 relative overflow-hidden ${
           isIndia
-            ? "bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 animate-gradient"
-            : "bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 animate-gradient"
+            ? "bg-gradient-to-br from-slate-50 via-lime-50 to-white animate-gradient"
+            : "bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950/30 animate-gradient"
         }`}
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
             className={`absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20 ${
-              isIndia ? "bg-purple-400" : "bg-lime-500"
+              isIndia ? "bg-lime-400" : "bg-emerald-400"
             }`}
             style={{ animation: "float 8s ease-in-out infinite" }}
           />
@@ -187,9 +187,7 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
             >
               Frequently Asked{" "}
               <span
-                className={`${
-                  isIndia ? "bg-green-700" : "bg-green-700"
-                } bg-clip-text text-transparent`}
+                className="bg-gradient-to-r from-lime-500 to-green-700 bg-clip-text text-transparent"
               >
                 Questions
               </span>

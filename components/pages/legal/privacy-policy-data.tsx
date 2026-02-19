@@ -178,10 +178,10 @@ export const privacyPolicyData = {
           <p>
             Contact us at{" "}
             <a
-              href="mailto:121@NGO Experts.com"
+              href="mailto:support@ngoexperts.com"
               className="text-lime-500 underline"
             >
-              121@NGO Experts.com
+              support@ngoexperts.com
             </a>{" "}
             to exercise your rights.
           </p>
@@ -218,14 +218,19 @@ export const privacyPolicyData = {
     items: [
       {
         title: "Email",
-        value: "121@NGO Experts.com",
-        href: "mailto:121@NGO Experts.com",
+        value: "support@ngoexperts.com",
+        href: "mailto:support@ngoexperts.com",
       },
       { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
       {
         title: "Website",
         value: "NGO Experts.com",
         href: "https://NGO Experts.com",
+      },
+      {
+        title: "Website",
+        value: "NGO Experts.com",
+        href: "https://ngoexperts.com",
       },
     ],
   },
