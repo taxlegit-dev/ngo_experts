@@ -38,8 +38,9 @@ export default async function IndiaHomePage() {
         {/* <RunningLogoCarousel /> */}
         {/* <AboutUs /> */}
         <ServicesSection />
-        <OurClients />
         <HowWeWorkSection />
+
+        <OurClients />
         {/* <OurProduct /> */}
         <RecentBlogsSection />
         <MediaMentions />

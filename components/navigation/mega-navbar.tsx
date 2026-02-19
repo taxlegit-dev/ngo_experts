@@ -167,7 +167,7 @@ function MegaNavbarContent({
   return (
     <header className="fixed top-10 left-0 right-0 z-50 w-full bg-gradient-to-b from-[#dff4d2] to-[#eef8ea]">
       <div ref={wrapperRef} className="relative">
-        <div className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-6">
+        <div className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-8 sm:px-6">
           {/* Logo */}
           <Link
             href={region === Region.US ? "/us" : "/"}
@@ -176,8 +176,8 @@ function MegaNavbarContent({
             <Image
               src="/logo/ngologo.png"
               alt="NGO Experts Logo"
-              width={90}
-              height={90}
+              width={120}
+              height={120}
               priority
             />
           </Link>
@@ -228,7 +228,7 @@ function MegaNavbarContent({
             <Link
               href="https://wa.me/918929218091"
                   target="_blank"
-              className="hidden h-[44px] items-center gap-2.5 rounded-[6px] bg-lime-500 px-5 text-[15px] font-semibold text-white shadow-sm hover:bg-green-700 md:flex"
+              className="hidden h-[44px] items-center gap-2.5 rounded-[6px] hover:bg-lime-500 px-5 text-[15px] font-semibold text-white shadow-sm bg-green-700 md:flex"
             >
               Schedule a call
             </Link>

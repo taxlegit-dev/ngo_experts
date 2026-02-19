@@ -46,11 +46,11 @@ const TopNavbar = () => {
           </a> */}
 
           <a
-            href="mailto:121@ngoexperts.com"
+            href="mailto:support@ngoexperts.com"
             className="flex items-center gap-1 hover:text-yellow-500 transition"
           >
             <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline">121@ngoexperts.com</span>
+            <span className="hidden sm:inline">support@ngoexperts.com</span>
           </a>
 
           <a

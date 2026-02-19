@@ -24,10 +24,10 @@ export default function OurClients() {
   ];
 
   return (
-    <section className="py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-5 lg:px-0 text-center">
         <h2
-          className="text-4xl md:text-5xl font-extrabold text-slate-900"
+          className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900"
           data-aos="fade-down"
         >
           Our <span className="text-lime-500">Clients</span>
@@ -44,14 +44,14 @@ export default function OurClients() {
         {/* Slider */}
         <div className="relative mt-14" data-aos="fade-up" data-aos-delay="200">
           {/* Fade Edges */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-green-100 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-green-100 to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white to-transparent z-10" />
 
           <div className="flex gap-8 animate-scroll whitespace-nowrap">
             {[...clients, ...clients].map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[180px] md:w-[220px] h-[100px] md:h-[120px] bg-white rounded-xl border border-emerald-100 shadow-md flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(16,185,129,0.25)]"
+                className="flex-shrink-0 w-[180px] md:w-[220px] h-[100px] md:h-[120px] bg-white rounded-xl border border-[#e1e5f0] shadow-md flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-lime-400 hover:shadow-[0_0_35px_rgba(163,230,53,0.45)]"
               >
                 <img
                   src={logo}

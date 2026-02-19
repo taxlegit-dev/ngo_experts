@@ -3,7 +3,7 @@ import RunningLogoCarousel from "@/components/pages/common/RunningLogoCarousel";
 import MissionVisionValues from "@/components/pages/about/MissionStatement";
 // import Ceo from "@/components/pages/about/ceo";
 import RecentBlogsSection from "@/components/pages/home/RecentBlogsSection";
-import WhyChooseTaxlegit from "@/components/pages/home/WhyTaxlegit";
+// import WhyChooseTaxlegit from "@/components/pages/home/WhyTaxlegit";
 import Footer from "@/components/footer";
 import AboutUsSection from "@/components/pages/about/AboutTaxlegit";
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <RunningLogoCarousel />
         <MissionVisionValues />
         {/* <Ceo /> */}
-        <WhyChooseTaxlegit />
+        {/* <WhyChooseTaxlegit /> */}
         <RecentBlogsSection />
         <Footer />
       </div>

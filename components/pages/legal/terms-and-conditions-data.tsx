@@ -397,8 +397,8 @@ export const termsAndConditionsData = {
       { title: "Website", value: "NGO Experts.com", href: "https://NGO Experts.com" },
       {
         title: "Email",
-        value: "121@NGO Experts.com",
-        href: "mailto:121@NGO Experts.com",
+        value: "support@ngoexperts.com",
+        href: "mailto:support@ngoexperts.com",
       },
       { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
     ],
