@@ -70,8 +70,14 @@ const steps = [
   },
 ];
 
-function TiltCard({ children, className, glowColor }) {
-  const ref = useRef(null);
+interface TiltCardProps {
+  children: React.ReactNode;
+  className?: string;
+  glowColor: string;
+}
+
+function TiltCard({ children, className, glowColor }: TiltCardProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 200, damping: 20 });
@@ -80,7 +86,8 @@ function TiltCard({ children, className, glowColor }) {
   const rotateY = useTransform(springX, [-0.5, 0.5], [-8, 8]);
   const [hovered, setHovered] = useState(false);
 
-  function handleMove(e) {
+  function handleMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
     x.set((e.clientX - rect.left) / rect.width - 0.5);
     y.set((e.clientY - rect.top) / rect.height - 0.5);
@@ -113,9 +120,9 @@ function TiltCard({ children, className, glowColor }) {
 }
 
 const floatVariants = {
-  animate: (i) => ({
+  animate: (i: number) => ({
     y: [0, -12, 0],
-    transition: { duration: 4 + i * 0.7, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 },
+    transition: { duration: 4 + i * 0.7, repeat: Infinity, ease: "easeInOut" as const, delay: i * 0.5 },
   }),
 };
 
