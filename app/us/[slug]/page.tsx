@@ -26,7 +26,7 @@ const getNavbarItemBySlug = unstable_cache(
       },
     }),
   ["navbar-item-by-slug"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 const getHeroByNavbarItemId = unstable_cache(
@@ -35,7 +35,7 @@ const getHeroByNavbarItemId = unstable_cache(
       where: { navbarItemId },
     }),
   ["page-hero-by-navbar-item"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 const getServicePageByNavbarItemId = unstable_cache(
@@ -49,7 +49,7 @@ const getServicePageByNavbarItemId = unstable_cache(
       },
     }),
   ["service-page-by-navbar-item"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 const getServicePageMetaByNavbarItemId = unstable_cache(
@@ -59,7 +59,7 @@ const getServicePageMetaByNavbarItemId = unstable_cache(
       select: { id: true },
     }),
   ["service-page-meta-by-navbar-item"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 const getGenericPageByNavbarItemId = unstable_cache(
@@ -71,7 +71,7 @@ const getGenericPageByNavbarItemId = unstable_cache(
       },
     }),
   ["generic-page-by-navbar-item"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 const getFaqByNavbarItemId = unstable_cache(
@@ -85,7 +85,7 @@ const getFaqByNavbarItemId = unstable_cache(
       },
     }),
   ["service-page-faq-by-navbar-item"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 const getMetaDataByPage = unstable_cache(
@@ -99,7 +99,7 @@ const getMetaDataByPage = unstable_cache(
       },
     }),
   ["meta-data-by-page"],
-  { revalidate: 300 }
+  { revalidate: 300 },
 );
 
 function extractJsonLd(htmlString: string) {
@@ -254,7 +254,7 @@ export default async function UsDynamicPage({ params }: DynamicPageProps) {
         />
       ))}
       <div className="min-h-screen bg-slate-950 text-white">
-          <main>
+        <main>
           {hero && hero.status === "PUBLISHED" && <UsHero hero={hero} />}
           {servicePage &&
           servicePage.status === "PUBLISHED" &&
@@ -267,7 +267,7 @@ export default async function UsDynamicPage({ params }: DynamicPageProps) {
             <section className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-12">
               <div className="rounded-3xl border border-white/10 bg-slate-900 p-10 shadow-2xl">
                 <div className="space-y-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-green-300">
                     United States
                   </p>
                   <h1 className="text-4xl font-semibold leading-tight">
@@ -276,8 +276,9 @@ export default async function UsDynamicPage({ params }: DynamicPageProps) {
                   <div className="max-w-2xl text-slate-200">
                     <p className="text-lg">
                       This is a dynamic page for{" "}
-                      <strong>{navbarItem.label}</strong>. Create a hero section,
-                      service page, or generic page in admin panel to customize this page.
+                      <strong>{navbarItem.label}</strong>. Create a hero
+                      section, service page, or generic page in admin panel to
+                      customize this page.
                     </p>
                   </div>
                 </div>

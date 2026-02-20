@@ -36,7 +36,7 @@ export default function AboutCompanyHero() {
           <div className="max-w-xl text-white">
             {/* Breadcrumb */}
             <nav className="mb-4 text-sm text-gray-300">
-              <Link href="/" className="text-purple-700 hover:underline">
+              <Link href="/" className="text-green-800 hover:underline">
                 Home
               </Link>
               <span className="mx-2">››</span>
@@ -74,33 +74,34 @@ export default function AboutCompanyHero() {
               <div className="mt-10 space-y-6">
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-purple-100 p-3 text-[#59A245]">
+                  <div className="rounded-lg bg-green-100 p-3 text-[#59A245]">
                     <Phone size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Call Us</p>
                     <p className="font-semibold text-gray-900">
-                      +91 8929218091
+                      +91 8595766812
                     </p>
                   </div>
                 </div>
 
                 {/* Location */}
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-purple-100 p-3 text-[#59A245]">
+                  <div className="rounded-lg bg-green-100 p-3 text-[#59A245]">
                     <MapPin size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Our Location</p>
                     <p className="font-semibold text-gray-900">
-                      New Delhi, India
+                      1117, Supertech Astralis, Sector-94, Noida, <br />
+                      Uttar Pradesh - 201301
                     </p>
                   </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-purple-100 p-3 text-[#59A245]">
+                  <div className="rounded-lg bg-green-100 p-3 text-[#59A245]">
                     <Mail size={20} />
                   </div>
                   <div>

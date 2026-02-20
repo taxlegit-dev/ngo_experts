@@ -44,7 +44,7 @@ export default async function BlogListingPage({
   const [featuredBlog, ...otherBlogs] = filteredBlogs;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#eef8ea] via-[#dff4d2] to-[#eef8ea] text-black">
+    <div className="min-h-screen bg-green-50 text-black">
       <main className="mx-auto w-full pt-[89px]">
         <BlogHero />
         {!featuredBlog ? (

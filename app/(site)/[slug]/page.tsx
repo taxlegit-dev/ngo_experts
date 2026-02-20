@@ -108,13 +108,13 @@ function getPageShellCached(slug: string, region: Region) {
   return unstable_cache(
     () => fetchPageShell(normalizedSlug, region),
     ["service-page-shell", region, normalizedSlug],
-    { revalidate: 3600, tags: [tag] }
+    { revalidate: 3600, tags: [tag] },
   )();
 }
 
 async function fetchServiceContent(
   navbarItemId: string,
-  servicePageId: string
+  servicePageId: string,
 ) {
   const [hero, sections, faq] = await Promise.all([
     prisma.pageHero.findUnique({
@@ -141,14 +141,14 @@ function getServiceContentCached(
   navbarItemId: string,
   servicePageId: string,
   slug: string,
-  region: Region
+  region: Region,
 ) {
   const normalizedSlug = normalizeSlug(slug);
   const tag = getServicePageTag(region, normalizedSlug);
   return unstable_cache(
     () => fetchServiceContent(navbarItemId, servicePageId),
     ["service-page-content", navbarItemId, servicePageId],
-    { revalidate: 3600, tags: [tag] }
+    { revalidate: 3600, tags: [tag] },
   )();
 }
 
@@ -226,7 +226,7 @@ export default async function ServicePage({ params, searchParams }: PageProps) {
           navbarItem.id,
           servicePage.id,
           normalizedSlug,
-          Region.INDIA
+          Region.INDIA,
         )
     : null;
   const jsonLdScripts = metaData?.metaBlock
@@ -243,7 +243,7 @@ export default async function ServicePage({ params, searchParams }: PageProps) {
         />
       ))}
 
-      <div className="min-h-screen bg-gradient-to-br from-[#eef8ea] via-[#dff4d2] to-[#eef8ea] text-black">
+      <div className="min-h-screen bg-white text-black">
         <main className="pt-[89px]">
           {servicePage && serviceData ? (
             <>
@@ -284,7 +284,7 @@ export default async function ServicePage({ params, searchParams }: PageProps) {
                 <RelatedBlogsSection
                   blogs={await getRelatedBlogsCached(
                     navbarItem.label,
-                    Region.INDIA
+                    Region.INDIA,
                   )}
                 />
               </Suspense>

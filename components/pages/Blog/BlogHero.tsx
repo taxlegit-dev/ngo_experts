@@ -26,7 +26,7 @@ export default function BlogHero() {
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center" />
 
-      {/* Dark purple Overlay */}
+      {/* Dark green Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/85 to-slate-700/70" />
 
       {/* Content */}

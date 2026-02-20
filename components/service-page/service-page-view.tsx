@@ -66,9 +66,9 @@ export function ServicePageView({ sections }: ServicePageViewProps) {
   const scrollToSection = (index: number) => {
     const element = sectionRefs.current[index];
     if (element) {
-      const navbarHeight = 72; // your fixed navbar height
+      const navbarHeight = 80; // your fixed navbar height
       const tocHeight = tocRef.current?.offsetHeight || 0;
-      const extraSpacing = 20; // little padding
+      const extraSpacing = 10; // little padding
 
       const totalOffset = navbarHeight + tocHeight + extraSpacing;
 
@@ -82,7 +82,7 @@ export function ServicePageView({ sections }: ServicePageViewProps) {
   };
 
   return (
-    <div className=" ">
+    <div className="bg-white ">
       {/* Sticky TOC Bar - Below Fixed Navbar with Blur Effect */}
       <div
         ref={tocRef}
@@ -96,14 +96,19 @@ export function ServicePageView({ sections }: ServicePageViewProps) {
             {sortedSections.map((section, index) => (
               <button
                 key={section.id}
+                type="button"
                 ref={(el) => {
                   tocButtonRefs.current[index] = el;
                 }}
-                onClick={() => scrollToSection(index)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  scrollToSection(index);
+                }}
                 className={`whitespace-nowrap px-3 py-1 text-md   transition-all duration-200 ${
                   activeSection === index
-                    ? "border-b-2 border-purple-400  text-lg"
-                    : "text-slate-700  hover:border-b-2 hover:border-purple-300"
+                    ? "border-b-2 border-green-400  text-lg"
+                    : "text-slate-700  hover:border-b-2 hover:border-green-300"
                 }`}
               >
                 {section.title}

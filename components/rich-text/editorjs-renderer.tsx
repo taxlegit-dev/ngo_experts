@@ -129,7 +129,7 @@ function ReadMoreHtml({
       {isLong && (
         <label
           htmlFor={contentId}
-          className="read-more-button block mx-auto  text-lg text-[#59A245] hover:text-purple-700 cursor-pointer underline text-center"
+          className="read-more-button block mx-auto  text-lg text-[#59A245] hover:text-green-800 cursor-pointer underline text-center"
         >
           <span className="read-more-label-collapsed">Read more</span>
           <span className="read-more-label-expanded">Read less</span>
@@ -183,7 +183,7 @@ function ReadMoreText({
       {isLong && (
         <label
           htmlFor={contentId}
-          className="read-more-button ml-2 text-sm text-[#59A245] hover:text-purple-700 cursor-pointer"
+          className="read-more-button ml-2 text-sm text-[#59A245] hover:text-green-800 cursor-pointer"
         >
           <span className="read-more-label-collapsed">Read more</span>
           <span className="read-more-label-expanded">Read less</span>
@@ -226,8 +226,8 @@ export function EditorJsRenderer({
 
   const contentClass =
     theme === "dark"
-      ? "prose prose-invert prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-purple-400 prose-a:no-underline hover:prose-a:text-purple-300 prose-a:transition-colors prose-strong:text-slate-100 prose-strong:font-semibold prose-code:text-purple-400 prose-code:bg-slate-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded"
-      : "prose prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-[#59A245] prose-a:no-underline hover:prose-a:text-purple-700 prose-a:transition-colors prose-strong:text-slate-900 prose-strong:font-semibold prose-code:text-[#59A245] prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded";
+      ? "prose prose-invert prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-green-400 prose-a:no-underline hover:prose-a:text-green-300 prose-a:transition-colors prose-strong:text-slate-100 prose-strong:font-semibold prose-code:text-green-400 prose-code:bg-slate-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded"
+      : "prose prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-[#59A245] prose-a:no-underline hover:prose-a:text-green-800 prose-a:transition-colors prose-strong:text-slate-900 prose-strong:font-semibold prose-code:text-[#59A245] prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded";
 
   return (
     <>
@@ -639,7 +639,7 @@ function renderBlock(
                   <li key={idx} className="flex items-start">
                     <span
                       className={`mr-2 mt-3 flex-shrink-0 w-1.5 h-1.5 rounded-full ${
-                        theme === "dark" ? "bg-purple-400" : "bg-[#59A245]"
+                        theme === "dark" ? "bg-green-400" : "bg-[#59A245]"
                       }`}
                     />
                     <span className="text-lg leading-relaxed text-gray-800 ">
@@ -732,7 +732,7 @@ function renderBlock(
             href={href}
             target={target}
             rel={target === "_blank" ? "noopener noreferrer" : undefined}
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-[#4b1b66] to-[#8b2bbd] hover:from-[#3f1655] hover:to-[#7a27a6] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white"
+            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-[#4b1b66] to-[#8b2bbd] hover:from-[#3f1655] hover:to-[#7a27a6] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-white"
           >
             {text}
           </a>

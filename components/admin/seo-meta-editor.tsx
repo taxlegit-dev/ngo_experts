@@ -26,7 +26,7 @@ export function SEOMetaEditor({
     const fetchMetaData = async () => {
       try {
         const response = await fetch(
-          `/api/admin/meta-data?pageType=${pageType}&pageId=${pageId}`
+          `/api/admin/meta-data?pageType=${pageType}&pageId=${pageId}`,
         );
         const result = await response.json();
 
@@ -164,7 +164,7 @@ export function SEOMetaEditor({
 <link rel="canonical" href="https://ngoexperts.com/page-url" />
 `}
           rows={20}
-          className="w-full rounded-lg border border-slate-200 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+          className="w-full rounded-lg border border-slate-200 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
         />
         <p className="text-xs text-slate-500 mt-2">
           Enter all HTML meta tags and JSON-LD schema. The content will be
@@ -176,7 +176,7 @@ export function SEOMetaEditor({
         <button
           onClick={handleSave}
           disabled={isPending}
-          className="px-6 py-2.5 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          className="px-6 py-2.5 bg-[#59A245] text-white font-semibold rounded-lg hover:bg-[#59A245] disabled:opacity-50 disabled:cursor-not-allowed transition"
         >
           {isPending ? "Saving..." : "Save Meta Tags"}
         </button>

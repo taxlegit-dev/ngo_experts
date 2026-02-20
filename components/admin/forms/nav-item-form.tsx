@@ -82,7 +82,7 @@ export function NavItemForm({ region }: NavItemFormProps) {
         <label className="text-sm font-semibold text-slate-800">Label</label>
         <input
           type="text"
-          className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           {...register("label")}
         />
         {errors.label && (
@@ -94,7 +94,7 @@ export function NavItemForm({ region }: NavItemFormProps) {
         <input
           type="text"
           placeholder="/services"
-          className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           {...register("href")}
         />
       </div>
@@ -103,7 +103,7 @@ export function NavItemForm({ region }: NavItemFormProps) {
           <label className="text-sm font-semibold text-slate-800">Order</label>
           <input
             type="number"
-            className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+            className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
             {...register("order")}
           />
         </div>
@@ -112,7 +112,7 @@ export function NavItemForm({ region }: NavItemFormProps) {
             Page Type
           </label>
           <select
-            className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+            className="w-full rounded-2xl border border-slate-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
             {...register("pageType")}
           >
             <option value="SERVICE">Service</option>
@@ -124,7 +124,7 @@ export function NavItemForm({ region }: NavItemFormProps) {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full rounded-2xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-500 disabled:opacity-70"
+        className="w-full rounded-2xl bg-[#59A245] px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-500 disabled:opacity-70"
       >
         {isPending ? "Saving..." : "Add navigation link"}
       </button>

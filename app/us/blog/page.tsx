@@ -20,14 +20,17 @@ export default async function UsBlogListingPage() {
   });
 
   // Group blogs by blog group
-  const blogsByGroup = blogs.reduce((acc, blog) => {
-    const groupName = blog.blogGroup.name;
-    if (!acc[groupName]) {
-      acc[groupName] = [];
-    }
-    acc[groupName].push(blog);
-    return acc;
-  }, {} as Record<string, typeof blogs>);
+  const blogsByGroup = blogs.reduce(
+    (acc, blog) => {
+      const groupName = blog.blogGroup.name;
+      if (!acc[groupName]) {
+        acc[groupName] = [];
+      }
+      acc[groupName].push(blog);
+      return acc;
+    },
+    {} as Record<string, typeof blogs>,
+  );
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -69,7 +72,7 @@ export default async function UsBlogListingPage() {
                       )}
 
                       <div className="p-6 bg-slate-900">
-                        <h3 className="text-xl font-semibold mb-2 group-hover:text-emerald-400 transition">
+                        <h3 className="text-xl font-semibold mb-2 group-hover:text-green-400 transition">
                           {blog.title}
                         </h3>
                         <div className="flex items-center justify-between text-sm text-slate-400">

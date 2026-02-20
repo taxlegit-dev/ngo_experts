@@ -53,7 +53,7 @@ export default function CTA() {
           transition={{ duration: 0.8 }}
         >
           <motion.span
-            className="inline-block rounded-full bg-gray-200 px-4 text-sm font-semibold mb-6"
+            className="inline-block rounded-full bg-yellow-500 px-4 text-sm font-semibold mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -62,9 +62,9 @@ export default function CTA() {
           </motion.span>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
-            Let&apos;s Build Something{" "}
+            First Step Toward &apos;s&nbsp;
             <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent animate-gradient-text">
-              Meaningful
+              Sustanable Future
             </span>
           </h2>
 

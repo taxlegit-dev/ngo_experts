@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUsSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-purple-50 py-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-green-50 py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* LEFT – IMAGE STACK */}
@@ -13,18 +13,6 @@ export default function AboutUsSection() {
                 alt="NGO Experts Team"
                 width={600}
                 height={500}
-                className="h-full w-full object-cover"
-                unoptimized
-              />
-            </div>
-
-            {/* Floating Image */}
-            <div className="absolute -bottom-12 -left-12 z-20 hidden w-64 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg lg:block">
-              <Image
-                src="/business.gif" // replace with your image
-                alt="Client Support"
-                width={260}
-                height={200}
                 className="h-full w-full object-cover"
                 unoptimized
               />

@@ -48,7 +48,7 @@ export default function AIGenerator() {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             placeholder="How to register a private limited company?"
-            className="flex-1 min-w-0 px-5 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="flex-1 min-w-0 px-5 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
           <button
@@ -69,7 +69,7 @@ export default function AIGenerator() {
 
         {/* LOADING */}
         {isLoading && (
-          <div className="mt-6 rounded-xl bg-purple-50 border border-purple-200 p-6 text-purple-700 animate-pulse">
+          <div className="mt-6 rounded-xl bg-green-50 border border-green-200 p-6 text-green-800 animate-pulse">
             ✨ Generating structured AI response…
           </div>
         )}

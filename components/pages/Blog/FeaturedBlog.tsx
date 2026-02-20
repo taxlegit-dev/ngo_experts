@@ -165,7 +165,7 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
           {/* CTA */}
           <Link
             href={`/blogs/${blog.slug || blog.id}`}
-            className="inline-block  text-sm sm:text-base font-semibold text-indigo-600 hover:text-indigo-500 transition-colors"
+            className="inline-block  text-sm sm:text-base font-semibold text-green-800 hover:text-green-700 transition-colors"
           >
             Read Article →
           </Link>

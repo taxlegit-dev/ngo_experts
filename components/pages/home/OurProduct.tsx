@@ -49,7 +49,7 @@ export default function OurProduct() {
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-24 text-BLACK">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Our Core <span className="text-purple-700">Product</span>
+            Our Core <span className="text-green-800">Product</span>
           </h2>
         </div>
 
@@ -58,7 +58,7 @@ export default function OurProduct() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-3xl p-4 shadow-md hover:shadow-xl transition-all border border-purple-100 flex flex-col"
+              className="group relative bg-white rounded-3xl p-4 shadow-md hover:shadow-xl transition-all border border-green-100 flex flex-col"
             >
               {/* Badge */}
               {feature.badge && (

@@ -6,7 +6,7 @@ export default async function UsHomePage() {
       <main className="pt-[89px] mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-12">
         <section className="rounded-3xl border border-white/10 bg-slate-900 p-10 shadow-2xl">
           <div className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-green-300">
               United States
             </p>
             <h1 className="text-4xl font-semibold leading-tight">

@@ -97,7 +97,7 @@ export default async function AuthorCard({
 
                 {/* Blog Info */}
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-xs sm:text-sm font-medium text-slate-900 group-hover:text-indigo-600 line-clamp-2">
+                  <h4 className="text-xs sm:text-sm font-medium text-slate-900 group-hover:text-green-800 line-clamp-2">
                     {blog.title}
                   </h4>
                   <p className="text-xs text-slate-500 mt-1">
@@ -123,7 +123,7 @@ export default async function AuthorCard({
         <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold">
           Stay Updated
         </h3>
-        <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-indigo-100">
+        <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-green-100">
           Get the latest articles delivered to your inbox.
         </p>
         <Newsletter />

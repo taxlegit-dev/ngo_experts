@@ -66,7 +66,7 @@ const EditorJsEditor = dynamic(
         Loading editor...
       </div>
     ),
-  }
+  },
 );
 
 // Helper function to parse Editor.js JSON from string
@@ -149,10 +149,10 @@ export function BlogManager({
   const [blogGroups, setBlogGroups] =
     useState<BlogGroupWithBlogs[]>(initialBlogGroups);
   const [selectedBlogGroupId] = useState<string | null>(
-    searchParams?.get("blogGroupId") || null
+    searchParams?.get("blogGroupId") || null,
   );
   const [selectedBlogId, setSelectedBlogId] = useState<string | null>(
-    searchParams?.get("blogId") || null
+    searchParams?.get("blogId") || null,
   );
   const [selectedBlog, setSelectedBlog] = useState<BlogWithGroup | null>(null);
   const [isSelectedBlogLoading, setIsSelectedBlogLoading] = useState(false);
@@ -166,7 +166,7 @@ export function BlogManager({
   const [isEditorReady, setIsEditorReady] = useState(false);
   const [authorImageFile, setAuthorImageFile] = useState<File | null>(null);
   const [authorImagePreview, setAuthorImagePreview] = useState<string | null>(
-    null
+    null,
   );
   const [blogImageFile, setBlogImageFile] = useState<File | null>(null);
   const [blogImagePreview, setBlogImagePreview] = useState<string | null>(null);
@@ -622,7 +622,7 @@ export function BlogManager({
             `/api/admin/blog-authors?id=${authorId}`,
             {
               method: "DELETE",
-            }
+            },
           );
 
           if (!response.ok) {
@@ -737,7 +737,7 @@ export function BlogManager({
               onClick={() => {
                 setSelectedBlogId(null);
                 const next = new URLSearchParams(
-                  searchParams?.toString() ?? ""
+                  searchParams?.toString() ?? "",
                 );
                 next.delete("blogId");
                 router.replace(`/admin/blog?${next.toString()}`, {
@@ -779,14 +779,14 @@ export function BlogManager({
                     // Clear selected blog ID so detail view doesn't show
                     setSelectedBlogId(null);
                     const next = new URLSearchParams(
-                      searchParams?.toString() ?? ""
+                      searchParams?.toString() ?? "",
                     );
                     next.delete("blogId");
                     router.replace(`/admin/blog?${next.toString()}`, {
                       scroll: false,
                     });
                   }}
-                  className="px-4 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg"
+                  className="px-4 py-2 text-sm font-medium text-green-800 hover:bg-green-50 rounded-lg"
                 >
                   Edit
                 </button>
@@ -1088,13 +1088,13 @@ export function BlogManager({
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-lg bg-[#59A245] px-4 py-3 text-white font-semibold hover:bg-[#59A245] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isPending
                 ? "Saving..."
                 : editingBlog
-                ? "Update Blog"
-                : "Create Blog"}
+                  ? "Update Blog"
+                  : "Create Blog"}
             </button>
           </form>
 
@@ -1128,7 +1128,7 @@ export function BlogManager({
               setEditingGroup(null);
               groupForm.reset();
             }}
-            className="px-4 py-2 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
+            className="px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50 rounded-lg transition"
           >
             + Create Group
           </button>
@@ -1138,7 +1138,7 @@ export function BlogManager({
               setEditingBlog(null);
               blogForm.reset({ blogGroupId: selectedBlogGroupId || "" });
             }}
-            className="px-4 py-2 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
+            className="px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50 rounded-lg transition"
           >
             + Create Blog
           </button>
@@ -1148,7 +1148,7 @@ export function BlogManager({
               setEditingAuthor(null);
               authorForm.reset();
             }}
-            className="px-4 py-2 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
+            className="px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50 rounded-lg transition"
           >
             + Add Author
           </button>
@@ -1237,7 +1237,7 @@ export function BlogManager({
               <button
                 type="submit"
                 disabled={isPending}
-                className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+                className="px-4 py-2 bg-[#59A245] text-white rounded-lg hover:bg-[#59A245] disabled:opacity-50"
               >
                 {isPending ? "Saving..." : editingAuthor ? "Update" : "Create"}
               </button>
@@ -1295,7 +1295,7 @@ export function BlogManager({
                 <button
                   type="submit"
                   disabled={isPending}
-                  className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#59A245] text-white rounded-lg hover:bg-[#59A245] disabled:opacity-50"
                 >
                   {isPending ? "Saving..." : editingGroup ? "Update" : "Create"}
                 </button>
@@ -1354,7 +1354,7 @@ export function BlogManager({
                       setEditingAuthor(author);
                       setShowAuthorForm(true);
                     }}
-                    className="px-3 py-1 text-sm text-indigo-600 hover:bg-indigo-50 rounded-lg"
+                    className="px-3 py-1 text-sm text-green-800 hover:bg-green-50 rounded-lg"
                   >
                     Edit
                   </button>
@@ -1398,7 +1398,7 @@ export function BlogManager({
                       setEditingGroup(group);
                       setShowGroupForm(true);
                     }}
-                    className="px-3 py-1 text-sm text-indigo-600 hover:bg-indigo-50 rounded-lg"
+                    className="px-3 py-1 text-sm text-green-800 hover:bg-green-50 rounded-lg"
                   >
                     Edit Group
                   </button>
@@ -1423,7 +1423,7 @@ export function BlogManager({
                       onClick={() => {
                         setSelectedBlogId(blog.id);
                         const next = new URLSearchParams(
-                          searchParams?.toString() ?? ""
+                          searchParams?.toString() ?? "",
                         );
                         next.set("blogId", blog.id);
                         router.replace(`/admin/blog?${next.toString()}`, {

@@ -175,7 +175,7 @@ function MegaNavbarContent({
   return (
     <header className="fixed top-10 left-0 right-0 z-50 w-full bg-white">
       <div ref={wrapperRef} className="relative">
-        <div className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-8 sm:px-6">
+        <div className="mx-auto flex h-[70px]  items-center justify-between gap-4 px-8 sm:px-6">
           {/* Logo */}
           <Link
             href={region === Region.US ? "/us" : "/"}
@@ -184,8 +184,8 @@ function MegaNavbarContent({
             <Image
               src="/logo/ngologo.png"
               alt="NGO Experts Logo"
-              width={200}
-              height={120}
+              width={130} //don't incease height.(comment by nikita)
+              height={130}
               priority
             />
           </Link>
@@ -234,7 +234,7 @@ function MegaNavbarContent({
           {/* Right Section */}
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <Link
-              href="https://wa.me/918929218091"
+              href="https://wa.me/918595766812"
               target="_blank"
               className="hidden h-[44px] items-center gap-2.5 rounded-[6px]  px-5 text-[15px]  text-black shadow-sm bg-white md:flex border border-yellow-900"
             >
@@ -258,36 +258,35 @@ function MegaNavbarContent({
             displayItems
               .filter((it) => it.type === "DROPDOWN" && it.id === hoveredItem)
               .map((item) => {
-                const totalLinks = item.groups.reduce(
-                  (acc, group) => acc + group.items.length,
-                  0,
-                );
+                const groupCount = item.groups.length;
+                const columnCount = Math.min(3, Math.max(1, groupCount));
 
-                const isSmallMenu = totalLinks <= 5; // threshold
+                const panelWidthClass =
+                  columnCount === 1
+                    ? "w-fit min-w-[260px] max-w-[520px]"
+                    : columnCount === 2
+                      ? "w-[95vw] max-w-[720px]"
+                      : "w-[95vw] max-w-[900px]";
+
+                const gridClass =
+                  columnCount === 1
+                    ? "grid grid-cols-1 gap-3"
+                    : columnCount === 2
+                      ? "grid grid-cols-1 gap-5 sm:grid-cols-2"
+                      : "grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3";
 
                 return (
                   <div
                     key={item.id}
                     onMouseEnter={() => openMenu(item.id)}
                     onMouseLeave={closeMenu}
-                    className={`fixed left-1/2 top-[110px] z-[9999] -translate-x-1/2 rounded-xl border border-zinc-100 bg-white/95 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-8
-              ${
-                isSmallMenu
-                  ? "w-auto min-w-[260px] max-w-[420px]"
-                  : "w-[95vw] max-w-[900px]"
-              }`}
+                    className={`fixed left-1/2 top-[110px] z-[9999] -translate-x-1/2 rounded-xl border border-zinc-100 bg-white/95 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-sm md:p-8 ${panelWidthClass}`}
                     style={{
                       maxHeight: "calc(100vh - 150px)",
                       overflowY: "auto",
                     }}
                   >
-                    <div
-                      className={
-                        isSmallMenu
-                          ? "grid grid-cols-1 gap-3"
-                          : "grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3"
-                      }
-                    >
+                    <div className={gridClass}>
                       {item.groups.map((group, i) => (
                         <div key={i} className="space-y-2">
                           {group.label && (
@@ -389,7 +388,7 @@ function MegaNavbarContent({
                   <div className="space-y-3 border-t border-green-200 pt-4">
                     <RegionSwitcher currentRegion={mappedRegion} />
                     <Link
-                      href="tel:+918929218091"
+                      href="tel:+918595766812"
                       onClick={handleMobileNavClick}
                       className="flex h-[42px] w-full items-center justify-center rounded-xl bg-[#59A245] text-[14px] font-semibold text-white shadow-sm hover:bg-green-700"
                     >

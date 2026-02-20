@@ -120,13 +120,13 @@ export default function BlogCard({ blog, showCategory = true }: BlogCardProps) {
             </span>
           </div>
         )}
-        <h4 className="text-base sm:text-lg font-semibold text-slate-900 transition-colors group-hover:text-indigo-600 line-clamp-2">
+        <h4 className="text-base sm:text-lg font-semibold text-slate-900 transition-colors group-hover:text-green-800 line-clamp-2">
           {blog.title}
         </h4>
         <p className="text-xs sm:text-sm text-slate-600 line-clamp-2">
           {excerpt || "Fresh insights and practical takeaways from our team."}
         </p>
-        <span className="mt-auto  text-xs sm:text-sm font-medium text-indigo-600 transition-colors group-hover:text-indigo-500">
+        <span className="mt-auto  text-xs sm:text-sm font-medium text-green-800 transition-colors group-hover:text-green-700">
           Continue reading →
         </span>
       </div>
