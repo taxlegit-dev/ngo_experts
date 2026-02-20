@@ -82,7 +82,7 @@ export function ServicePageView({ sections }: ServicePageViewProps) {
   };
 
   return (
-    <div className=" ">
+    <div className="bg-white ">
       {/* Sticky TOC Bar - Below Fixed Navbar with Blur Effect */}
       <div
         ref={tocRef}
@@ -102,8 +102,8 @@ export function ServicePageView({ sections }: ServicePageViewProps) {
                 onClick={() => scrollToSection(index)}
                 className={`whitespace-nowrap px-3 py-1 text-md   transition-all duration-200 ${
                   activeSection === index
-                    ? "border-b-2 border-purple-400  text-lg"
-                    : "text-slate-700  hover:border-b-2 hover:border-purple-300"
+                    ? "border-b-2 border-green-400  text-lg"
+                    : "text-slate-700  hover:border-b-2 hover:border-green-300"
                 }`}
               >
                 {section.title}

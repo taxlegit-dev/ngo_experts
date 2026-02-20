@@ -112,7 +112,7 @@ export function IndiaHero({
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-indigo-50 via-white to-slate-50 py-10 ">
+    <section className="bg-gradient-to-br from-green-50 via-white to-slate-50 py-10 ">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left Content */}
@@ -180,7 +180,7 @@ export function IndiaHero({
             <div ref={statsRef} className="mt-6 grid gap-6 sm:grid-cols-3">
               {stats.map((stat, index) => (
                 <div key={stat.label} className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500 text-white shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#59A245] text-white shadow-sm">
                     <stat.Icon className="h-6 w-6" />
                   </div>
                   <div>

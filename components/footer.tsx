@@ -148,7 +148,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative w-full md:w-auto
-    bg-white text-[#61C100] font-bold
+    bg-white text-[#59A245] font-bold
     px-4 lg:px-8 py-2 lg:py-4 rounded-lg md:rounded-xl
     shadow-lg hover:shadow-2xl
     transition-all duration-300
@@ -167,7 +167,7 @@ const Footer = () => {
               className="
         absolute -bottom-4 left-1/2 transform -translate-x-1/2
         w-3/4 h-8
-        bg-gradient-to-t from-[#61C100]/30 to-transparent
+        bg-gradient-to-t from-[#59A245]/30 to-transparent
         rounded-full
         blur-md
       "
@@ -184,7 +184,7 @@ const Footer = () => {
               <div className="lg:col-span-2 space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-4">
-                    NGO<span className="text-[#61C100]"> Experts</span>
+                    NGO<span className="text-[#59A245]"> Experts</span>
                   </h2>
                   <p className="text-gray-400 leading-relaxed max-w-md">
                     Your trusted partner for business registrations, compliance,
@@ -197,21 +197,21 @@ const Footer = () => {
                   <div className="space-y-2">
                     <a
                       href="tel:+918595766812"
-                      className="flex items-center gap-3 text-white hover:text-[#61C100] transition-colors"
+                      className="flex items-center gap-3 text-white hover:text-[#59A245] transition-colors"
                     >
-                      <FaPhoneAlt className="text-[#61C100]" />
+                      <FaPhoneAlt className="text-[#59A245]" />
                       <span>+91 8595766812</span>
                     </a>
                     <a
                       href="mailto:support@ngoexperts.com"
-                      className="flex items-center gap-3 text-white hover:text-[#61C100] transition-colors"
+                      className="flex items-center gap-3 text-white hover:text-[#59A245] transition-colors"
                     >
-                      <FaEnvelope className="text-[#61C100]" />
+                      <FaEnvelope className="text-[#59A245]" />
                       <span>support@ngoexperts.com</span>
                     </a>
                   </div>
                   <div className="flex items-start gap-3">
-                    <FaMapMarkerAlt className="text-[#61C100] mt-1 flex-shrink-0" />
+                    <FaMapMarkerAlt className="text-[#59A245] mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-white">
                         Registered Office
@@ -245,7 +245,7 @@ const Footer = () => {
 
               {/* Popular Registration */}
               <div className="space-y-6">
-                <h3 className="text-lg font-semibold text-white border-l-4 border-[#61C100] pl-3">
+                <h3 className="text-lg font-semibold text-white border-l-4 border-[#59A245] pl-3">
                   Services
                 </h3>
                 <ul className="space-y-3">
@@ -255,7 +255,7 @@ const Footer = () => {
                         href={item.href}
                         className="group flex items-center text-gray-400 hover:text-white transition-colors duration-300"
                       >
-                        <FaChevronRight className="mr-2 text-[#61C100] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <FaChevronRight className="mr-2 text-[#59A245] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
                         <span>{item.name}</span>
                       </a>
                     </li>
@@ -286,7 +286,7 @@ const Footer = () => {
               {/* Quick Links */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-lg font-semibold text-white border-l-4 border-[#61C100] pl-3">
+                  <h3 className="text-lg font-semibold text-white border-l-4 border-[#59A245] pl-3">
                     Company
                   </h3>
                   <ul className="space-y-3 mt-4">
@@ -296,7 +296,7 @@ const Footer = () => {
                           href={item.href}
                           className="group flex items-center text-gray-400 hover:text-white transition-colors duration-300"
                         >
-                          <FaChevronRight className="mr-2 text-[#61C100] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <FaChevronRight className="mr-2 text-[#59A245] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
                           <span>{item.name}</span>
                         </a>
                       </li>

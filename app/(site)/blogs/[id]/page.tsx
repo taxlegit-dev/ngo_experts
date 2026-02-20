@@ -3,7 +3,6 @@ import { prisma } from "@/lib/prisma";
 import Footer from "@/components/footer";
 import { EditorJsRenderer } from "@/components/rich-text/editorjs-renderer";
 import type { OutputData } from "@editorjs/editorjs";
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -157,22 +156,14 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         />
       ))}
 
-      <div className="min-h-screen bg-white text-black">
-        <main className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          {/* Back */}
-          <Link
-            href="/blogs"
-            className="mb-8 inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"
-          >
-            ← Back to Blogs
-          </Link>
-
+      <div className="min-h-screen bg-white text-black pt-10">
+        <main className="mx-auto w-full max-w-7xl px-4 py-24  sm:px-6 lg:px-8">
           {/* FLEX LAYOUT: 75% CONTENT | 25% AUTHOR */}
           <div className="flex flex-col gap-8 lg:flex-row">
             {/* LEFT : BLOG CONTENT - 75% */}
             <article className="lg:w-3/4">
               <div className="mb-6">
-                <span className="mb-4 inline-block rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">
+                <span className="mb-4 inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
                   {blog.blogGroup.name}
                 </span>
 
@@ -214,13 +205,13 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               </div>
 
               {/* Featured Image */}
-              <div className="relative mb-8 h-64 w-full overflow-hidden rounded-xl md:h-80 lg:h-96">
+              <div className="relative mb-8 w-full overflow-hidden rounded-xl bg-slate-100 aspect-[16/9]">
                 <Image
                   src={blogImageSrc}
                   alt={blog.title}
                   fill
                   priority
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(min-width: 1024px) 75vw, 100vw"
                   unoptimized
                 />

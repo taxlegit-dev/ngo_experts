@@ -27,7 +27,9 @@ export function RegionFilter({ value }: RegionFilterProps) {
           type="button"
           onClick={() => handleChange(regionOption.value)}
           className={`rounded-full px-3 py-1 transition ${
-            regionOption.value === value ? "bg-indigo-600 text-white" : "text-zinc-600 hover:text-zinc-900"
+            regionOption.value === value
+              ? "bg-[#59A245] text-white"
+              : "text-zinc-600 hover:text-zinc-900"
           }`}
         >
           {regionOption.label}
@@ -36,4 +38,3 @@ export function RegionFilter({ value }: RegionFilterProps) {
     </div>
   );
 }
-

@@ -64,18 +64,18 @@ export default function LegalPage({
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-6 border-b-4 border-purple-500 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-6 border-b-4 border-green-500 relative overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
 
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Icon and Title Section */}
           <div className="flex flex-col items-center">
             <div className="flex items-center justify-center mb-6 gap-6">
               <div className="relative">
-                <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-xl"></div>
-                <div className="relative p-4 bg-gradient-to-br from-[#59A245] to-purple-700 rounded-2xl shadow-xl">
+                <div className="absolute inset-0 bg-green-500/20 rounded-2xl blur-xl"></div>
+                <div className="relative p-4 bg-gradient-to-br from-[#59A245] to-green-700 rounded-2xl shadow-xl">
                   {icon}
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function LegalPage({
       {/* Introduction */}
       {introduction && (
         <div className="max-w-4xl mx-auto px-6 py-12">
-          <div className="bg-purple-50 rounded-xl p-8 mb-12 border border-purple-100">
+          <div className="bg-green-50 rounded-xl p-8 mb-12 border border-green-100">
             {introduction}
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function LegalPage({
                 ))}
               </div>
               {contactInfo.note && (
-                <div className="mt-8 p-4 bg-purple-50 rounded-lg border border-purple-100">
+                <div className="mt-8 p-4 bg-green-50 rounded-lg border border-green-100">
                   <p className="text-center text-gray-700">
                     <span className="font-semibold text-[#59A245]">Note:</span>{" "}
                     {contactInfo.note}

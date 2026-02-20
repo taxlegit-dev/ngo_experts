@@ -163,7 +163,7 @@ export default async function UsBlogDetailPage({
 
           <article>
             <div className="mb-6">
-              <span className="inline-block px-3 py-1 rounded-full bg-emerald-900/50 text-emerald-300 text-sm font-medium mb-4">
+              <span className="inline-block px-3 py-1 rounded-full bg-emerald-900/50 text-green-300 text-sm font-medium mb-4">
                 {blog.blogGroup.name}
               </span>
               <h1 className="text-4xl font-semibold mb-4">{blog.title}</h1>
@@ -201,14 +201,14 @@ export default async function UsBlogDetailPage({
             </div>
 
             {blog.image && (
-              <div className="w-full h-48 overflow-hidden mb-8">
+              <div className="w-full mb-8 overflow-hidden rounded-xl bg-slate-900/40 aspect-[16/9] relative">
                 <Image
                   src={blog.image}
                   alt={blog.title}
-                  width={800}
-                  height={500}
+                  fill
                   unoptimized
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain"
+                  sizes="(min-width: 1024px) 75vw, 100vw"
                 />
               </div>
             )}

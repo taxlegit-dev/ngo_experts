@@ -54,7 +54,7 @@ export default function MissionVisionValues() {
           <div>
             <h2 className="text-4xl font-extrabold text-gray-900">
               Mission, Vision <br />
-              <span className="text-purple-700">& Values</span>
+              <span className="text-green-800">& Values</span>
             </h2>
 
             <p className="mt-4 max-w-md text-gray-600">

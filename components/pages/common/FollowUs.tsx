@@ -3,7 +3,7 @@ import {
   FaTwitter,
   FaFacebookF,
   FaYoutube,
-  FaLinkedinIn
+  FaLinkedinIn,
 } from "react-icons/fa";
 import Link from "next/link";
 
@@ -50,7 +50,7 @@ export default function FollowUs() {
               <Link
                 href={social.href}
                 target="_blank"
-                className="flex items-center justify-between py-3 text-sm text-slate-700 hover:text-indigo-600 transition"
+                className="flex items-center justify-between py-3 text-sm text-slate-700 hover:text-green-800 transition"
               >
                 <span className="flex items-center gap-3">
                   <Icon className="h-4 w-4" />

@@ -13,16 +13,30 @@ export function RichContent({ document, theme = "light" }: RichContentProps) {
     return null;
   }
 
-  const baseClass = theme === "dark" ? "prose prose-invert prose-emerald max-w-none" : "prose prose-indigo max-w-none";
+  const baseClass =
+    theme === "dark"
+      ? "prose prose-invert prose-emerald max-w-none"
+      : "prose prose-green max-w-none";
 
-  return <div className={baseClass}>{document.content.map((node, index) => renderNode(node, index, theme))}</div>;
+  return (
+    <div className={baseClass}>
+      {document.content.map((node, index) => renderNode(node, index, theme))}
+    </div>
+  );
 }
 
-function renderNode(node: RichTextDocument, index: number, theme: "light" | "dark"): React.ReactNode {
+function renderNode(
+  node: RichTextDocument,
+  index: number,
+  theme: "light" | "dark",
+): React.ReactNode {
   switch (node.type) {
     case "paragraph":
       return (
-        <p key={index} className={`text-base ${theme === "dark" ? "text-slate-200" : "text-zinc-600"}`}>
+        <p
+          key={index}
+          className={`text-base ${theme === "dark" ? "text-slate-200" : "text-zinc-600"}`}
+        >
           {node.content?.map((child, idx) => renderNode(child, idx, theme))}
         </p>
       );
@@ -30,20 +44,29 @@ function renderNode(node: RichTextDocument, index: number, theme: "light" | "dar
       if (!node.text) return null;
       if (node.marks?.some((mark) => mark.type === "bold")) {
         return (
-          <strong key={index} className={`font-semibold ${theme === "dark" ? "text-white" : "text-zinc-900"}`}>
+          <strong
+            key={index}
+            className={`font-semibold ${theme === "dark" ? "text-white" : "text-zinc-900"}`}
+          >
             {node.text}
           </strong>
         );
       }
       if (node.marks?.some((mark) => mark.type === "italic")) {
         return (
-          <em key={index} className={`italic ${theme === "dark" ? "text-slate-200" : "text-zinc-700"}`}>
+          <em
+            key={index}
+            className={`italic ${theme === "dark" ? "text-slate-200" : "text-zinc-700"}`}
+          >
             {node.text}
           </em>
         );
       }
       return (
-        <span key={index} className={theme === "dark" ? "text-slate-200" : "text-zinc-600"}>
+        <span
+          key={index}
+          className={theme === "dark" ? "text-slate-200" : "text-zinc-600"}
+        >
           {node.text}
         </span>
       );
@@ -52,7 +75,9 @@ function renderNode(node: RichTextDocument, index: number, theme: "light" | "dar
       const headingProps = {
         key: index,
         className: `font-semibold ${theme === "dark" ? "text-white" : "text-zinc-900"}`,
-        children: node.content?.map((child, idx) => renderNode(child, idx, theme)),
+        children: node.content?.map((child, idx) =>
+          renderNode(child, idx, theme),
+        ),
       };
       switch (level) {
         case 1:
@@ -72,7 +97,10 @@ function renderNode(node: RichTextDocument, index: number, theme: "light" | "dar
       }
     case "bulletList":
       return (
-        <ul key={index} className={`list-disc pl-6 ${theme === "dark" ? "text-slate-200" : "text-zinc-600"}`}>
+        <ul
+          key={index}
+          className={`list-disc pl-6 ${theme === "dark" ? "text-slate-200" : "text-zinc-600"}`}
+        >
           {node.content?.map((child, idx) => renderNode(child, idx, theme))}
         </ul>
       );
@@ -84,7 +112,10 @@ function renderNode(node: RichTextDocument, index: number, theme: "light" | "dar
       );
     case "codeBlock":
       return (
-        <pre key={index} className="rounded-lg bg-zinc-900/90 p-4 text-sm text-white">
+        <pre
+          key={index}
+          className="rounded-lg bg-zinc-900/90 p-4 text-sm text-white"
+        >
           {node.content?.map((child, idx) => renderNode(child, idx, theme))}
         </pre>
       );
@@ -92,4 +123,3 @@ function renderNode(node: RichTextDocument, index: number, theme: "light" | "dar
       return null;
   }
 }
-

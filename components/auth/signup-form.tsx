@@ -104,7 +104,7 @@ export function SignupForm() {
         <input
           id="name"
           type="text"
-          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           placeholder="Enter your name"
           {...register("name")}
         />
@@ -119,7 +119,7 @@ export function SignupForm() {
         <input
           id="email"
           type="email"
-          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           placeholder="your@email.com"
           {...register("email")}
         />
@@ -134,7 +134,7 @@ export function SignupForm() {
         <input
           id="contact"
           type="tel"
-          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           placeholder="+91 1234567890"
           {...register("contact")}
         />
@@ -149,7 +149,7 @@ export function SignupForm() {
         <input
           id="password"
           type="password"
-          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           placeholder="••••••••"
           {...register("password")}
         />
@@ -167,7 +167,7 @@ export function SignupForm() {
         <input
           id="confirmPassword"
           type="password"
-          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-100"
           placeholder="••••••••"
           {...register("confirmPassword")}
         />
@@ -185,7 +185,7 @@ export function SignupForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-70"
+        className="w-full rounded-lg bg-[#59A245] px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-500 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {isPending ? "Creating account..." : "Sign up"}
       </button>
@@ -193,7 +193,7 @@ export function SignupForm() {
         Already have an account?{" "}
         <Link
           href="/login"
-          className="font-semibold text-indigo-600 hover:text-indigo-500"
+          className="font-semibold text-green-800 hover:text-green-700"
         >
           Sign in
         </Link>

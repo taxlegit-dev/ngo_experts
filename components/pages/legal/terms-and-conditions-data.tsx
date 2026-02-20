@@ -47,7 +47,7 @@ export const termsAndConditionsData = {
             Sec-94, Noida, Uttar Pradesh-201301, India.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <div className="flex items-center mb-3">
                 <Shield className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">
@@ -61,7 +61,7 @@ export const termsAndConditionsData = {
                 information you provide is accurate and up to date.
               </p>
             </div>
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <div className="flex items-center mb-3">
                 <Scale className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">
@@ -95,7 +95,7 @@ export const termsAndConditionsData = {
       content: (
         <div className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <div className="flex items-center mb-3">
                 <Users className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">Eligibility</h4>
@@ -167,7 +167,7 @@ export const termsAndConditionsData = {
                 desc: "Refunds shall only be processed after verification based on clearly visible proofs provided by the user.",
               },
             ].map((item, idx) => (
-              <div key={idx} className="border-l-4 border-purple-500 pl-4 py-2">
+              <div key={idx} className="border-l-4 border-green-500 pl-4 py-2">
                 <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">{item.icon}</span>
                   <h4 className="font-semibold text-gray-900">{item.title}</h4>
@@ -204,8 +204,8 @@ export const termsAndConditionsData = {
       content: (
         <div className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="text-center p-6 border border-purple-100 rounded-lg bg-purple-50">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 border border-green-100 rounded-lg bg-green-50">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-6 h-6 text-[#59A245]" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">
@@ -325,7 +325,7 @@ export const termsAndConditionsData = {
       content: (
         <div className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <div className="flex items-center mb-3">
                 <Lock className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">Data Protection</h4>
@@ -336,7 +336,7 @@ export const termsAndConditionsData = {
                 sell or misuse.
               </p>
             </div>
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <div className="flex items-center mb-3">
                 <Shield className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">
@@ -349,7 +349,7 @@ export const termsAndConditionsData = {
               </p>
             </div>
           </div>
-          <div className="bg-purple-50 p-5 rounded-lg border border-purple-100">
+          <div className="bg-green-50 p-5 rounded-lg border border-green-100">
             <p className="text-gray-900">
               For more details, please read our{" "}
               <Link

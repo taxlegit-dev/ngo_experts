@@ -4,8 +4,9 @@ import { useState } from "react";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] =
-    useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -52,7 +53,7 @@ export default function Newsletter() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full rounded-xl bg-white py-3 text-sm font-semibold text-indigo-600 transition hover:bg-slate-100 active:scale-[0.98] disabled:cursor-not-allowed"
+          className="w-full rounded-xl bg-white py-3 text-sm font-semibold text-green-800 transition hover:bg-slate-100 active:scale-[0.98] disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Subscribing..." : "Subscribe Now"}
         </button>

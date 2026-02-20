@@ -5,7 +5,7 @@ import { Mail, Phone } from "lucide-react";
 
 const TopNavbar = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-[#65a30d] text-black text-md">
+    <div className="fixed top-0 left-0 right-0 z-[60] w-full bg-[#59A245] text-black text-md">
       <div className="max-w-7xl mx-auto flex h-10 items-center justify-end sm:justify-between px-4 lg:px-0">
         {/* left Side - Social Media */}
 

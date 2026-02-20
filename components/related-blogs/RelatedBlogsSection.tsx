@@ -15,11 +15,7 @@ type RelatedBlog = {
 
 const FALLBACK_IMAGE_SRC = "/hero1.jpg";
 
-export function RelatedBlogsSection({
-  blogs,
-}: {
-  blogs: RelatedBlog[];
-}) {
+export function RelatedBlogsSection({ blogs }: { blogs: RelatedBlog[] }) {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -50,13 +46,13 @@ export function RelatedBlogsSection({
             >
               <article
                 data-aos="flip-left"
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-purple-100 hover:-translate-y-2 h-full flex flex-col"
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-green-100 hover:-translate-y-2 h-full flex flex-col"
               >
                 {/* Image */}
                 <div className="relative h-48 bg-gray-100 overflow-hidden">
                   <Image
                     src={blog.image || FALLBACK_IMAGE_SRC}
-                    alt={'img'}
+                    alt={"img"}
                     fill
                     unoptimized
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -74,21 +70,8 @@ export function RelatedBlogsSection({
                   </h3>
 
                   {/* CTA */}
-                  <div className="mt-4 flex items-center text-sm font-semibold text-purple-700 group-hover:text-purple-500 transition-colors">
-                    <span>Read Article</span>
-                    <svg
-                      className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                  <div className="mt-4 flex items-center text-sm font-semibold text-green-800 group-hover:text-green-800 transition-colors">
+                    <span>Read Article →</span>
                   </div>
                 </div>
               </article>

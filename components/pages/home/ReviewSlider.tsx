@@ -130,8 +130,8 @@ export default function ReviewSlider() {
   return (
     <div className="relative bg-white text-black py-16 px-4 overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-700"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-700"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -163,7 +163,7 @@ export default function ReviewSlider() {
             {getVisibleReviews().map((review, idx) => (
               <div
                 key={`${review.id}-${idx}`}
-                className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 flex flex-col justify-between transform hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-purple-100 relative overflow-hidden group"
+                className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 flex flex-col justify-between transform hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-green-100 relative overflow-hidden group"
               >
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -184,7 +184,7 @@ export default function ReviewSlider() {
                       />
                     </div>
                   ) : (
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
                       {review.name.charAt(0)}
                     </div>
                   )}

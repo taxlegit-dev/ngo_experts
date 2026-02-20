@@ -86,9 +86,7 @@ export function ChangePasswordForm({
           <button
             type="button"
             onClick={() => setShowCurrentPassword((prev) => !prev)}
-            aria-label={
-              showCurrentPassword ? "Hide password" : "Show password"
-            }
+            aria-label={showCurrentPassword ? "Hide password" : "Show password"}
             className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700"
           >
             {showCurrentPassword ? "🙈" : "👁️"}
@@ -130,9 +128,7 @@ export function ChangePasswordForm({
           <button
             type="button"
             onClick={() => setShowConfirmPassword((prev) => !prev)}
-            aria-label={
-              showConfirmPassword ? "Hide password" : "Show password"
-            }
+            aria-label={showConfirmPassword ? "Hide password" : "Show password"}
             className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700"
           >
             {showConfirmPassword ? "🙈" : "👁️"}
@@ -140,7 +136,7 @@ export function ChangePasswordForm({
         </div>
       </label>
       {error && <p className="text-xs text-red-600">{error}</p>}
-      {success && <p className="text-xs text-emerald-600">{success}</p>}
+      {success && <p className="text-xs text-green-600">{success}</p>}
       <button
         type="submit"
         disabled={isSubmitting}

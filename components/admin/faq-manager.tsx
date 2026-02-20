@@ -5,7 +5,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import type { NavbarItem, ServicePageFAQ, ServicePageFAQItem } from "@prisma/client";
+import type {
+  NavbarItem,
+  ServicePageFAQ,
+  ServicePageFAQItem,
+} from "@prisma/client";
 import { useAdminSearch } from "@/components/admin/admin-search-context";
 
 type FAQWithNavItem = ServicePageFAQ & {
@@ -24,13 +28,15 @@ type FAQManagerProps = {
 
 const faqSchema = z.object({
   navbarItemId: z.string().min(1),
-  questions: z.array(
-    z.object({
-      question: z.string().min(3, "Question must be at least 3 characters"),
-      answer: z.string().min(10, "Answer must be at least 10 characters"),
-      order: z.number().int().min(0).default(0),
-    })
-  ).min(1, "At least one FAQ item is required"),
+  questions: z
+    .array(
+      z.object({
+        question: z.string().min(3, "Question must be at least 3 characters"),
+        answer: z.string().min(10, "Answer must be at least 10 characters"),
+        order: z.number().int().min(0).default(0),
+      }),
+    )
+    .min(1, "At least one FAQ item is required"),
 });
 
 type FAQForm = z.infer<typeof faqSchema>;
@@ -79,13 +85,14 @@ export function FAQManager({
     if (existingFAQ) {
       form.reset({
         navbarItemId: existingFAQ.navbarItemId,
-        questions: existingFAQ.questions.length > 0
-          ? existingFAQ.questions.map((q) => ({
-              question: q.question,
-              answer: q.answer,
-              order: q.order,
-            }))
-          : [{ question: "", answer: "", order: 0 }],
+        questions:
+          existingFAQ.questions.length > 0
+            ? existingFAQ.questions.map((q) => ({
+                question: q.question,
+                answer: q.answer,
+                order: q.order,
+              }))
+            : [{ question: "", answer: "", order: 0 }],
       });
     } else if (selectedItemId || selectedNavbarItemId) {
       form.reset({
@@ -116,7 +123,7 @@ export function FAQManager({
 
       // Validate questions have at least one non-empty item
       const filteredQuestions = data.questions.filter(
-        (q) => q.question.trim() && q.answer.trim()
+        (q) => q.question.trim() && q.answer.trim(),
       );
       if (filteredQuestions.length === 0) {
         setMessage("Please add at least one FAQ question and answer");
@@ -193,30 +200,30 @@ export function FAQManager({
               <p className="text-sm text-slate-500">No matches found.</p>
             ) : (
               filteredNavItems.map((item) => {
-              const hasFAQ = allFAQs.some((f) => f.navbarItemId === item.id);
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavbarItemSelect(item.id)}
-                  className="w-full text-left rounded-lg border border-slate-200 p-4 hover:bg-slate-50 transition"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-semibold text-slate-900">
-                        {item.label}
+                const hasFAQ = allFAQs.some((f) => f.navbarItemId === item.id);
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleNavbarItemSelect(item.id)}
+                    className="w-full text-left rounded-lg border border-slate-200 p-4 hover:bg-slate-50 transition"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="font-semibold text-slate-900">
+                          {item.label}
+                        </div>
+                        <div className="text-xs text-slate-500 mt-1">
+                          {item.href}
+                        </div>
                       </div>
-                      <div className="text-xs text-slate-500 mt-1">
-                        {item.href}
-                      </div>
+                      {hasFAQ && (
+                        <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700">
+                          Has FAQ
+                        </span>
+                      )}
                     </div>
-                    {hasFAQ && (
-                      <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700">
-                        Has FAQ
-                      </span>
-                    )}
-                  </div>
-                </button>
-              );
+                  </button>
+                );
               })
             )}
           </div>
@@ -226,7 +233,7 @@ export function FAQManager({
   }
 
   const selectedItem = navItems.find(
-    (item) => item.id === (selectedItemId || selectedNavbarItemId)
+    (item) => item.id === (selectedItemId || selectedNavbarItemId),
   );
 
   return (
@@ -336,12 +343,15 @@ export function FAQManager({
                     </label>
                     <input
                       {...form.register(`questions.${index}.question`)}
-                      className="w-full rounded-lg border border-slate-200 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full rounded-lg border border-slate-200 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-green-500"
                       placeholder="e.g., What documents are required for registration?"
                     />
                     {form.formState.errors.questions?.[index]?.question && (
                       <p className="text-xs text-red-600 mt-1">
-                        {form.formState.errors.questions[index]?.question?.message}
+                        {
+                          form.formState.errors.questions[index]?.question
+                            ?.message
+                        }
                       </p>
                     )}
                   </div>
@@ -352,12 +362,15 @@ export function FAQManager({
                     <textarea
                       {...form.register(`questions.${index}.answer`)}
                       rows={4}
-                      className="w-full rounded-lg border border-slate-200 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full rounded-lg border border-slate-200 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-green-500"
                       placeholder="Provide a detailed answer..."
                     />
                     {form.formState.errors.questions?.[index]?.answer && (
                       <p className="text-xs text-red-600 mt-1">
-                        {form.formState.errors.questions[index]?.answer?.message}
+                        {
+                          form.formState.errors.questions[index]?.answer
+                            ?.message
+                        }
                       </p>
                     )}
                   </div>
@@ -366,8 +379,10 @@ export function FAQManager({
             ))}
             <button
               type="button"
-              onClick={() => append({ question: "", answer: "", order: fields.length })}
-              className="w-full rounded-lg border-2 border-dashed border-slate-300 px-4 py-3 text-sm font-medium text-slate-600 hover:border-indigo-500 hover:text-indigo-600 hover:bg-indigo-50 transition"
+              onClick={() =>
+                append({ question: "", answer: "", order: fields.length })
+              }
+              className="w-full rounded-lg border-2 border-dashed border-slate-300 px-4 py-3 text-sm font-medium text-slate-600 hover:border-green-500 hover:text-green-800 hover:bg-green-50 transition"
             >
               + Add Another FAQ
             </button>
@@ -376,17 +391,16 @@ export function FAQManager({
           <button
             type="submit"
             disabled={isPending}
-            className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+            className="w-full rounded-lg bg-[#59A245] px-4 py-3 text-white font-semibold hover:bg-[#59A245] disabled:opacity-50 disabled:cursor-not-allowed transition"
           >
             {isPending
               ? "Saving..."
               : existingFAQ
-              ? "Update FAQ Section"
-              : "Create FAQ Section"}
+                ? "Update FAQ Section"
+                : "Create FAQ Section"}
           </button>
         </form>
       </div>
     </div>
   );
 }
-

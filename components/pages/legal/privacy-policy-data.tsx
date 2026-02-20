@@ -98,7 +98,7 @@ export const privacyPolicyData = {
             <li>Prevent fraud and strengthen system security</li>
           </ul>
 
-          <div className="bg-purple-50 p-4 rounded-lg">
+          <div className="bg-green-50 p-4 rounded-lg">
             <p className="text-gray-900 font-semibold">
               Important: We never sell your personal information.
             </p>

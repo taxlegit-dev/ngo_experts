@@ -118,21 +118,8 @@ export default function RecentBlogsSection() {
                   </h3>
 
                   {/* Read More Link */}
-                  <div className="mt-4 flex items-center text-sm font-semibold text-green-700 group-hover:text-emerald-600 transition-colors duration-300">
-                    <span>Read Article</span>
-                    <svg
-                      className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                  <div className="mt-4 flex items-center text-sm font-semibold text-green-700 group-hover:text-green-600 transition-colors duration-300">
+                    <span>Read Article →</span>
                   </div>
                 </div>
               </article>

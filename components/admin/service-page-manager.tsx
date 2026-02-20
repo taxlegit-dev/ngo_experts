@@ -471,7 +471,7 @@ export function ServicePageManager({
               {previewUrl && (
                 <button
                   onClick={() => window.open(previewUrl, "_blank")}
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-lg transition"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-green-800 hover:text-green-700 hover:bg-green-50 rounded-lg transition"
                 >
                   <svg
                     className="w-4 h-4"
@@ -559,7 +559,7 @@ export function ServicePageManager({
                   });
                   setExpandedSections((prev) => new Set([...prev, newIndex]));
                 }}
-                className="px-4 py-2 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
+                className="px-4 py-2 text-sm font-semibold text-green-800 hover:bg-green-50 rounded-lg transition"
                 disabled={fields.length >= 10}
               >
                 + Add Section
@@ -586,7 +586,7 @@ export function ServicePageManager({
                     className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-semibold text-sm">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-semibold text-sm">
                         {index + 1}
                       </span>
                       <div className="text-left">
@@ -616,7 +616,7 @@ export function ServicePageManager({
                             return next;
                           });
                         }}
-                        className="px-3 py-1.5 text-sm font-medium text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
+                        className="px-3 py-1.5 text-sm font-medium text-green-800 hover:bg-green-50 rounded-lg transition"
                       >
                         {isExpanded ? "Close" : "Edit"}
                       </button>
@@ -756,7 +756,7 @@ export function ServicePageManager({
                         type="button"
                         onClick={() => handleSectionUpdate(index)}
                         disabled={savingSection === index}
-                        className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+                        className="w-full rounded-lg bg-[#59A245] px-4 py-2.5 text-white font-semibold hover:bg-[#59A245] disabled:opacity-50 disabled:cursor-not-allowed transition"
                       >
                         {savingSection === index
                           ? "Saving..."

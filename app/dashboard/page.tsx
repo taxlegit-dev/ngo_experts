@@ -14,7 +14,7 @@ export default async function UserDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-slate-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-slate-50">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-center justify-between">
           <div>
@@ -64,7 +64,7 @@ export default async function UserDashboard() {
             </p>
             <Link
               href="/services"
-              className="mt-4 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-500"
+              className="mt-4 inline-block text-sm font-medium text-green-800 hover:text-green-700"
             >
               View Services →
             </Link>

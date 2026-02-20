@@ -33,7 +33,7 @@ export default function HeroPage() {
           <div className="max-w-xl text-white">
             {/* Breadcrumb */}
             <nav className="mb-4 text-sm text-gray-300">
-              <Link href="/" className="text-purple-700 hover:underline">
+              <Link href="/" className="text-green-800 hover:underline">
                 Home
               </Link>
               <span className="mx-2">››</span>

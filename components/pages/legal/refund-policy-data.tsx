@@ -37,7 +37,7 @@ export const refundPolicyData = {
           </p>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <h4 className="font-semibold text-gray-900 mb-2">
                 ⏰ Time Frame
               </h4>
@@ -48,7 +48,7 @@ export const refundPolicyData = {
               </p>
             </div>
 
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
               <h4 className="font-semibold text-gray-900 mb-2">
                 📋 Service Status
               </h4>
@@ -59,7 +59,7 @@ export const refundPolicyData = {
               </p>
             </div>
 
-            <div className="p-5 border border-purple-100 rounded-lg bg-purple-50 md:col-span-2">
+            <div className="p-5 border border-green-100 rounded-lg bg-green-50 md:col-span-2">
               <h4 className="font-semibold text-gray-900 mb-2">
                 🛡️ Required Information
               </h4>

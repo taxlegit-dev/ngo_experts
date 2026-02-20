@@ -24,13 +24,13 @@ export default function SelectRegionPage() {
   // Show error message if not logged in or not admin, but don't redirect automatically
   if (!session?.user) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-slate-50 px-4 py-12">
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 via-white to-slate-50 px-4 py-12">
         <div className="w-full max-w-md space-y-4 rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm text-center">
           <h1 className="text-xl font-semibold text-zinc-900">Access Denied</h1>
           <p className="text-sm text-zinc-600">Please login to continue</p>
           <Link
             href="/login"
-            className="inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-500"
+            className="inline-block rounded-lg bg-[#59A245] px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-500"
           >
             Go to Login
           </Link>
@@ -42,7 +42,7 @@ export default function SelectRegionPage() {
   // Only allow ADMIN users to access region selection
   if (session.user.role !== "ADMIN") {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-slate-50 px-4 py-12">
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 via-white to-slate-50 px-4 py-12">
         <div className="w-full max-w-md space-y-4 rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm text-center">
           <h1 className="text-xl font-semibold text-zinc-900">Access Denied</h1>
           <p className="text-sm text-zinc-600">
@@ -50,7 +50,7 @@ export default function SelectRegionPage() {
           </p>
           <Link
             href="/dashboard"
-            className="inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-500"
+            className="inline-block rounded-lg bg-[#59A245] px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-500"
           >
             Go to Dashboard
           </Link>
@@ -66,7 +66,7 @@ export default function SelectRegionPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-slate-50 px-4 py-12">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 via-white to-slate-50 px-4 py-12">
       <div className="w-full max-w-md space-y-8 rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-semibold text-zinc-900">
@@ -84,7 +84,7 @@ export default function SelectRegionPage() {
             disabled={isPending}
             className={`w-full rounded-lg border-2 p-4 text-left transition ${
               selectedRegion === "INDIA"
-                ? "border-indigo-600 bg-indigo-50"
+                ? "border-green-600 bg-green-50"
                 : "border-zinc-200 bg-white hover:border-zinc-300"
             } ${
               isPending ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
@@ -98,7 +98,7 @@ export default function SelectRegionPage() {
                 </p>
               </div>
               {selectedRegion === "INDIA" && (
-                <div className="h-5 w-5 rounded-full bg-indigo-600 flex items-center justify-center">
+                <div className="h-5 w-5 rounded-full bg-[#59A245] flex items-center justify-center">
                   <svg
                     className="h-3 w-3 text-white"
                     fill="currentColor"
@@ -121,7 +121,7 @@ export default function SelectRegionPage() {
             disabled={isPending}
             className={`w-full rounded-lg border-2 p-4 text-left transition ${
               selectedRegion === "US"
-                ? "border-indigo-600 bg-indigo-50"
+                ? "border-green-600 bg-green-50"
                 : "border-zinc-200 bg-white hover:border-zinc-300"
             } ${
               isPending ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
@@ -135,7 +135,7 @@ export default function SelectRegionPage() {
                 </p>
               </div>
               {selectedRegion === "US" && (
-                <div className="h-5 w-5 rounded-full bg-indigo-600 flex items-center justify-center">
+                <div className="h-5 w-5 rounded-full bg-[#59A245] flex items-center justify-center">
                   <svg
                     className="h-3 w-3 text-white"
                     fill="currentColor"
@@ -157,7 +157,7 @@ export default function SelectRegionPage() {
           type="button"
           onClick={handleContinue}
           disabled={isPending}
-          className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-70"
+          className="w-full rounded-lg bg-[#59A245] px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-500 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isPending ? "Loading..." : "Continue"}
         </button>

@@ -243,9 +243,9 @@ export function HeroSectionManager({
         const firstError = Object.values(errors)[0];
         toast.error(
           firstError?.message?.toString() ||
-            "Please fill in all required fields correctly."
+            "Please fill in all required fields correctly.",
         );
-      }
+      },
     )();
   };
 
@@ -303,7 +303,7 @@ export function HeroSectionManager({
             ) : (
               filteredNavItems.map((item) => {
                 const hasHero = allHeroes.some(
-                  (h) => h.navbarItemId === item.id
+                  (h) => h.navbarItemId === item.id,
                 );
                 return (
                   <button
@@ -337,7 +337,7 @@ export function HeroSectionManager({
   }
 
   const selectedItem = navItems.find(
-    (item) => item.id === (selectedItemId || selectedNavbarItemId)
+    (item) => item.id === (selectedItemId || selectedNavbarItemId),
   );
 
   return (
@@ -422,7 +422,7 @@ export function HeroSectionManager({
                           const benefits = indiaForm.getValues("benefits");
                           indiaForm.setValue(
                             "benefits",
-                            benefits.filter((_, i) => i !== index)
+                            benefits.filter((_, i) => i !== index),
                           );
                         }}
                         className="px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg"
@@ -438,7 +438,7 @@ export function HeroSectionManager({
                     const benefits = indiaForm.getValues("benefits");
                     indiaForm.setValue("benefits", [...benefits, ""]);
                   }}
-                  className="mt-2 text-sm text-indigo-600 hover:text-indigo-700"
+                  className="mt-2 text-sm text-green-800 hover:text-green-700"
                 >
                   + Add Benefit
                 </button>
@@ -447,13 +447,13 @@ export function HeroSectionManager({
               <button
                 type="submit"
                 disabled={isPending}
-                className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full rounded-lg bg-[#59A245] px-4 py-2 text-white font-semibold hover:bg-[#59A245] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isPending
                   ? "Saving..."
                   : existingHero
-                  ? "Update Hero Section"
-                  : "Create Hero Section"}
+                    ? "Update Hero Section"
+                    : "Create Hero Section"}
               </button>
             </form>
           </div>
@@ -513,13 +513,13 @@ export function HeroSectionManager({
               <button
                 type="submit"
                 disabled={isPending}
-                className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50"
+                className="w-full rounded-lg bg-[#59A245] px-4 py-2 text-white font-semibold hover:bg-[#59A245] disabled:opacity-50"
               >
                 {isPending
                   ? "Saving..."
                   : existingHero
-                  ? "Update Hero Section"
-                  : "Create Hero Section"}
+                    ? "Update Hero Section"
+                    : "Create Hero Section"}
               </button>
             </form>
           </div>

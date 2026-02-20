@@ -18,17 +18,17 @@ export function UsHero({ hero }: UsHeroProps) {
   const description = hero.description || "";
 
   return (
-    <section className="relative min-h-[5 00px] flex items-center justify-center bg-gradient-to-br from-white via-purple-50 to-purple-50 overflow-hidden">
+    <section className="relative min-h-[5 00px] flex items-center justify-center bg-gradient-to-br from-white via-green-50 to-green-50 overflow-hidden">
       {/* Background Blur Shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center ">
         {/* Announcement Banner */}
         {announcement && (
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#59A245] to-purple-700 px-4 py-2 text-sm text-white shadow-lg">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#59A245] to-green-700 px-4 py-2 text-sm text-white shadow-lg">
             <span className="rounded-full bg-green-700 px-2 py-0.5 text-xs font-semibold">
               New
             </span>

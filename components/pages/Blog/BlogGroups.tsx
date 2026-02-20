@@ -43,14 +43,17 @@ export default async function BlogGroups({
   })) as BlogAuthor[];
 
   // Group blogs by category
-  const groupedBlogs = blogs.reduce((groups, blog) => {
-    const groupName = blog.blogGroup.name;
-    if (!groups[groupName]) {
-      groups[groupName] = [];
-    }
-    groups[groupName].push(blog);
-    return groups;
-  }, {} as Record<string, BlogWithGroup[]>);
+  const groupedBlogs = blogs.reduce(
+    (groups, blog) => {
+      const groupName = blog.blogGroup.name;
+      if (!groups[groupName]) {
+        groups[groupName] = [];
+      }
+      groups[groupName].push(blog);
+      return groups;
+    },
+    {} as Record<string, BlogWithGroup[]>,
+  );
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10">
@@ -71,7 +74,7 @@ export default async function BlogGroups({
                 {/* Group Header */}
                 <div className="border-b border-slate-200 pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="h-8 w-2 rounded-full bg-indigo-600" />
+                    <div className="h-8 w-2 rounded-full bg-[#59A245]" />
                     <h4 className="text-xl font-bold text-slate-900">
                       {groupName}
                     </h4>
@@ -122,7 +125,7 @@ export default async function BlogGroups({
                           </div>
                         ) : (
                           <div className="mx-auto mb-3 h-20 w-20 overflow-hidden rounded-full border-4 border-white shadow-md">
-                            <div className="h-full w-full bg-gradient-to-br from-indigo-400 to-purple-500" />
+                            <div className="h-full w-full bg-gradient-to-br from-green-400 to-green-500" />
                           </div>
                         )}
                         <h3 className="text-lg font-bold text-slate-900">

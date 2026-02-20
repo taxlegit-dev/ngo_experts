@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function LeadershipTeam() {
   return (
-    <section className="bg-purple-50 py-16">
+    <section className="bg-green-50 py-16">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-16 text-center">

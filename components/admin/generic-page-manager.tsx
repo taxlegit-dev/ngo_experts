@@ -25,7 +25,7 @@ const EditorJsEditor = dynamic(
         Loading editor...
       </div>
     ),
-  }
+  },
 );
 
 function tryParseEditorJson(content: string): OutputData | null {
@@ -241,7 +241,7 @@ export function GenericPageManager({
               <p className="text-sm text-slate-500">No matches found.</p>
             ) : (
               filteredNavbarItems.map((item) => {
-              const correspondingPage = pageByNavbarItemId.get(item.id);
+                const correspondingPage = pageByNavbarItemId.get(item.id);
                 return (
                   <button
                     key={item.id}
@@ -272,8 +272,8 @@ export function GenericPageManager({
                             correspondingPage.status === "PUBLISHED"
                               ? "bg-green-100 text-green-700"
                               : correspondingPage.status === "DRAFT"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-red-100 text-red-700"
                           }`}
                         >
                           {correspondingPage.status}
@@ -343,7 +343,6 @@ export function GenericPageManager({
             </div>
             <input type="hidden" {...form.register("id")} />
 
-
             <div>
               <label className="block text-sm font-semibold text-slate-900 mb-2">
                 Content <span className="text-red-500">*</span>
@@ -388,13 +387,13 @@ export function GenericPageManager({
             type="button"
             onClick={handleSave}
             disabled={saving}
-            className="w-full rounded-lg bg-indigo-600 px-4 py-3 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+            className="w-full rounded-lg bg-[#59A245] px-4 py-3 text-white font-semibold hover:bg-[#59A245] disabled:opacity-50 disabled:cursor-not-allowed transition"
           >
             {saving
               ? "Saving..."
               : existingGenericPage
-              ? "Update Page"
-              : "Create Page"}
+                ? "Update Page"
+                : "Create Page"}
           </button>
 
           {/* SEO Meta Tags Section */}

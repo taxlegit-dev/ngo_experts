@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUsSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-purple-50 py-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-green-50 py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* LEFT – IMAGE STACK */}
