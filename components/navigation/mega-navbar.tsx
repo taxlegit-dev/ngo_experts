@@ -175,7 +175,7 @@ function MegaNavbarContent({
   return (
     <header className="fixed top-10 left-0 right-0 z-50 w-full bg-white">
       <div ref={wrapperRef} className="relative">
-        <div className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-8 sm:px-6">
+        <div className="mx-auto flex h-[70px]  items-center justify-between gap-4 px-8 sm:px-6">
           {/* Logo */}
           <Link
             href={region === Region.US ? "/us" : "/"}
@@ -184,8 +184,8 @@ function MegaNavbarContent({
             <Image
               src="/logo/ngologo.png"
               alt="NGO Experts Logo"
-              width={200}
-              height={120}
+              width={130} //don't incease height.(comment by nikita)
+              height={130}
               priority
             />
           </Link>
