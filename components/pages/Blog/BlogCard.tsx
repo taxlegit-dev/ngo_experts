@@ -1,10 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { BlogWithGroup } from "@/types/blog";
 
 // this file used in blogGroup.
+export type BlogCardData = {
+  id: string;
+  slug?: string | null;
+  title: string;
+  image?: string | null;
+  content: string;
+  createdAt: string | Date;
+  blogGroup: {
+    name: string;
+  };
+};
+
 interface BlogCardProps {
-  blog: BlogWithGroup;
+  blog: BlogCardData;
   showCategory?: boolean;
 }
 
