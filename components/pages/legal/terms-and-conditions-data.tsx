@@ -1,6 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { FileText, AlertTriangle, Scale, Users, Clock, Lock } from "lucide-react";
+import {
+  FileText,
+  AlertTriangle,
+  Scale,
+  Users,
+  Clock,
+  Lock,
+} from "lucide-react";
 
 export const termsAndConditionsData = {
   title: "Terms & Conditions",
@@ -49,8 +56,8 @@ export const termsAndConditionsData = {
           <p>
             We act as a facilitator, guiding you through the legal and
             procedural steps involved in running an NGO. Our team comprises
-            professionals who understand the system and are committed to
-            making your compliance experience stress-free.
+            professionals who understand the system and are committed to making
+            your compliance experience stress-free.
           </p>
           <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
             <div className="flex items-start gap-3">
@@ -112,8 +119,8 @@ export const termsAndConditionsData = {
             </li>
           </ul>
           <p>
-            We aim to be fair and reasonable. If there is an issue, please
-            reach out and we will try to resolve it.
+            We aim to be fair and reasonable. If there is an issue, please reach
+            out and we will try to resolve it.
           </p>
         </div>
       ),
@@ -147,7 +154,9 @@ export const termsAndConditionsData = {
         <div className="space-y-4 text-gray-700">
           <p>To keep things smooth and fast, please:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Submit required documents correctly and in requested formats</li>
+            <li>
+              Submit required documents correctly and in requested formats
+            </li>
             <li>Double-check spelling, names, PAN, addresses, and numbers</li>
             <li>Respond promptly to our queries, emails, or calls</li>
             <li>
@@ -178,7 +187,9 @@ export const termsAndConditionsData = {
             <ul className="list-disc pl-6 space-y-2 mt-2">
               <li>Delays in application approvals</li>
               <li>Technical issues on government portals</li>
-              <li>Penalties due to late filings caused by delayed client response</li>
+              <li>
+                Penalties due to late filings caused by delayed client response
+              </li>
               <li>Rejections caused by data mismatch or missing documents</li>
             </ul>
           </div>
@@ -245,9 +256,8 @@ export const termsAndConditionsData = {
         value: "support@ngoexperts.com",
         href: "mailto:support@ngoexperts.com",
       },
-      { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
+      { title: "Phone", value: "+91-8595766812", href: "tel:+918595766812" },
     ],
-    note:
-      "Address: NGO Experts Consulting Private Limited, 1117, Supertech Astralis, Sec-94, Noida, Uttar Pradesh-201301, India",
+    note: "Address: NGO Experts Consulting Private Limited, 1117, Supertech Astralis, Sec-94, Noida, Uttar Pradesh-201301, India",
   },
 };

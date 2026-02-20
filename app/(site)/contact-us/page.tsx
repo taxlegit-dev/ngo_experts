@@ -80,7 +80,7 @@ export default function AboutCompanyHero() {
                   <div>
                     <p className="text-sm text-gray-500">Call Us</p>
                     <p className="font-semibold text-gray-900">
-                      +91 8929218091
+                      +91 8595766812
                     </p>
                   </div>
                 </div>
@@ -93,7 +93,8 @@ export default function AboutCompanyHero() {
                   <div>
                     <p className="text-sm text-gray-500">Our Location</p>
                     <p className="font-semibold text-gray-900">
-                      New Delhi, India
+                      1117, Supertech Astralis, Sector-94, Noida, <br />
+                      Uttar Pradesh - 201301
                     </p>
                   </div>
                 </div>

@@ -109,8 +109,8 @@ export const refundPolicyData = {
       },
       {
         title: "Phone",
-        value: "+91-8929218091",
-        href: "tel:+918929218091",
+        value: "+91-8595766812",
+        href: "tel:+918595766812",
       },
       {
         title: "Working Hours",

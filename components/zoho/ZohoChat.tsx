@@ -42,7 +42,7 @@ export default function ZohoChat() {
 
       <Script
         id="zsiqscript"
-        src="https://salesiq.zohopublic.com/widget?wc=siq0e51e73d307d4571c5cde2ed5c2d585af9a0b468d06b8658f9486e3b3d6ff665"
+        src="https://salesiq.zohopublic.com/widget?wc=siq3e7aec1f9842a124f73b41a5b9ded796ed0ac73a4fbe6e3d5d7e37cd3b8f57a6"
         strategy="lazyOnload"
       />
 

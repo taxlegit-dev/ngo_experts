@@ -90,7 +90,9 @@ export const privacyPolicyData = {
               <ul className="space-y-2 list-disc pl-5">
                 <li>Device type, IP address, browser information</li>
                 <li>How you navigate and use our website</li>
-                <li>Cookies and tracking data (for performance and experience)</li>
+                <li>
+                  Cookies and tracking data (for performance and experience)
+                </li>
               </ul>
             </div>
           </div>
@@ -108,7 +110,10 @@ export const privacyPolicyData = {
       expandable: true,
       content: (
         <div className="space-y-4 text-gray-700">
-          <p>We only collect what is necessary -- and always with a clear purpose.</p>
+          <p>
+            We only collect what is necessary -- and always with a clear
+            purpose.
+          </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>To process your NGO or company registration</li>
             <li>To prepare and file required compliance documents</li>
@@ -164,8 +169,8 @@ export const privacyPolicyData = {
               Darpan, Income Tax Department)
             </li>
             <li>
-              Chartered Accountants, Company Secretaries, and legal professionals
-              working on your project
+              Chartered Accountants, Company Secretaries, and legal
+              professionals working on your project
             </li>
             <li>Payment gateways (for secure transaction processing)</li>
           </ul>
@@ -239,7 +244,9 @@ export const privacyPolicyData = {
           <p>We retain your data only as long as necessary:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>To complete the services you have requested</li>
-            <li>To comply with legal and financial record-keeping requirements</li>
+            <li>
+              To comply with legal and financial record-keeping requirements
+            </li>
             <li>To provide post-service support and documentation if needed</li>
           </ul>
           <p>
@@ -276,7 +283,7 @@ export const privacyPolicyData = {
         value: "support@ngoexperts.com",
         href: "mailto:support@ngoexperts.com",
       },
-      { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
+      { title: "Phone", value: "+91-8595766812", href: "tel:+918595766812" },
       {
         title: "Website",
         value: "ngoexperts.com",

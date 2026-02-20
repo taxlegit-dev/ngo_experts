@@ -18,18 +18,6 @@ export default function AboutUsSection() {
               />
             </div>
 
-            {/* Floating Image */}
-            <div className="absolute -bottom-12 -left-12 z-20 hidden w-64 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg lg:block">
-              <Image
-                src="/business.gif" // replace with your image
-                alt="Client Support"
-                width={260}
-                height={200}
-                className="h-full w-full object-cover"
-                unoptimized
-              />
-            </div>
-
             {/* Badge */}
             <div className="absolute right-1 -top-16 z-20 rounded-2xl bg-[#59A245] px-6 py-4 text-center text-white shadow-lg">
               <p className="text-sm font-medium">Trusted by</p>

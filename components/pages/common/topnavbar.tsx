@@ -12,7 +12,7 @@ const TopNavbar = () => {
         {/* right Side - Contact Info */}
         <div className="flex items-center gap-4 sm:ml-auto">
           {/* <a
-            href="https://wa.me/918929218091"
+            href="https://wa.me/918595766812"
             target="_blank"
             className="flex items-center gap-1 hover:text-green-400 transition"
           >
@@ -29,11 +29,11 @@ const TopNavbar = () => {
           </a>
 
           <a
-            href="tel:+918929218091"
+            href="tel:+918595766812"
             className="flex items-center gap-1 hover:text-gray-100 transition"
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">+91 8929218091</span>
+            <span className="hidden sm:inline">+91 8595766812</span>
           </a>
         </div>
       </div>
