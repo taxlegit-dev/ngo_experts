@@ -30,7 +30,7 @@ export default async function IndiaHomePage() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#eef8ea] via-[#d7f4cc] to-[#eef8ea] text-black">
+    <div className="min-h-screen bg-white text-black">
       <div className="mt-18">
         <TaxLegitHero />
         {/* <RunningLogoCarousel /> */}

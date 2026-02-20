@@ -27,7 +27,10 @@ const steps = [
 
 export default function About() {
   return (
-    <section id="about" className="relative  px-6 py-24 overflow-hidden">
+    <section
+      id="about"
+      className="relative  px-6 py-24 overflow-hidden bg-gradient-to-br from-[#eef8ea] via-[#d7f4cc] to-[#eef8ea] "
+    >
       {/* Background decoration */}
       <div className="absolute inset-0">
         <motion.div
