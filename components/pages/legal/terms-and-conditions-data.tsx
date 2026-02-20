@@ -25,8 +25,8 @@ export const termsAndConditionsData = {
       </p>
       <p className="text-gray-800 leading-relaxed mb-4">
         This agreement outlines our scope of services, client responsibilities,
-        and how we keep things transparent and ethical. As a client availing
-        NGO Experts services, you agree to the following terms and conditions.
+        and how we keep things transparent and ethical. As a client availing NGO
+        Experts services, you agree to the following terms and conditions.
       </p>
       <p className="text-gray-800 leading-relaxed font-medium">
         If you have any issues related to our services, please reach out to us
@@ -42,14 +42,14 @@ export const termsAndConditionsData = {
       content: (
         <div className="space-y-6">
           <p className="text-gray-700 leading-relaxed">
-            Welcome to NGO Experts! This website is owned and operated by NGO Experts
-            Consulting Private Limited, 1117, Supertech Astralis, Sec-94, Noida,
-            Uttar Pradesh-201301, India.
+            Welcome to NGO Experts! This website is owned and operated by NGO
+            Experts Consulting Private Limited, 1117, Supertech Astralis,
+            Sec-94, Noida, Uttar Pradesh-201301, India.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
               <div className="flex items-center mb-3">
-                <Shield className="w-5 h-5 text-lime-500 mr-2" />
+                <Shield className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">
                   Information Requirement
                 </h4>
@@ -63,7 +63,7 @@ export const termsAndConditionsData = {
             </div>
             <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
               <div className="flex items-center mb-3">
-                <Scale className="w-5 h-5 text-lime-500 mr-2" />
+                <Scale className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">
                   Scope of Services
                 </h4>
@@ -97,12 +97,12 @@ export const termsAndConditionsData = {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
               <div className="flex items-center mb-3">
-                <Users className="w-5 h-5 text-lime-500 mr-2" />
+                <Users className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">Eligibility</h4>
               </div>
               <p className="text-gray-700">
-                To access NGO Experts&apos;s resources and services, you must be at
-                least 18 years old and capable of entering into binding
+                To access NGO Experts&apos;s resources and services, you must be
+                at least 18 years old and capable of entering into binding
                 contracts.
               </p>
             </div>
@@ -206,13 +206,14 @@ export const termsAndConditionsData = {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="text-center p-6 border border-purple-100 rounded-lg bg-purple-50">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6 text-lime-500" />
+                <Clock className="w-6 h-6 text-[#59A245]" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">
                 Prompt Processing
               </h4>
               <p className="text-gray-700">
-                NGO Experts aims to process returns and provide updates promptly.
+                NGO Experts aims to process returns and provide updates
+                promptly.
               </p>
             </div>
             <div className="text-center p-6 border border-yellow-100 rounded-lg bg-yellow-50">
@@ -326,7 +327,7 @@ export const termsAndConditionsData = {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
               <div className="flex items-center mb-3">
-                <Lock className="w-5 h-5 text-lime-500 mr-2" />
+                <Lock className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">Data Protection</h4>
               </div>
               <p className="text-gray-700">
@@ -337,7 +338,7 @@ export const termsAndConditionsData = {
             </div>
             <div className="p-5 border border-purple-100 rounded-lg bg-purple-50">
               <div className="flex items-center mb-3">
-                <Shield className="w-5 h-5 text-lime-500 mr-2" />
+                <Shield className="w-5 h-5 text-[#59A245] mr-2" />
                 <h4 className="font-semibold text-gray-900">
                   Account Security
                 </h4>
@@ -353,7 +354,7 @@ export const termsAndConditionsData = {
               For more details, please read our{" "}
               <Link
                 href="/privacy-policy"
-                className="text-lime-500 font-semibold hover:underline"
+                className="text-[#59A245] font-semibold hover:underline"
               >
                 Privacy Policy
               </Link>
@@ -394,7 +395,11 @@ export const termsAndConditionsData = {
     description:
       "Our support team is here to help you understand our terms and conditions better.",
     items: [
-      { title: "Website", value: "NGO Experts.com", href: "https://NGO Experts.com" },
+      {
+        title: "Website",
+        value: "NGO Experts.com",
+        href: "https://NGO Experts.com",
+      },
       {
         title: "Email",
         value: "support@ngoexperts.com",
@@ -405,4 +410,3 @@ export const termsAndConditionsData = {
     note: "Address: NGO Experts Consulting Private Limited, 1117, Supertech Astralis, Sec-94, Noida, Uttar Pradesh-201301, India",
   },
 };
-

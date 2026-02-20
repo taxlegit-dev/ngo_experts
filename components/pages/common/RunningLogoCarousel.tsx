@@ -35,7 +35,7 @@ export default function RunningLogoCarousel() {
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="text-center mb-10">
-          <p className="uppercase tracking-widest text-sm text-lime-500 font-medium">
+          <p className="uppercase tracking-widest text-sm text-[#59A245] font-medium">
             Trusted by leading brands
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-800 mt-2">

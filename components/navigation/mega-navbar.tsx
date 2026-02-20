@@ -8,7 +8,6 @@ import { RegionSwitcher } from "@/components/navigation/region-switcher";
 import { toSupportedRegion } from "@/lib/regions";
 import Image from "next/image";
 
-
 type NavbarItem = {
   id: string;
   label: string;
@@ -111,6 +110,15 @@ function MegaNavbarContent({
   const displayItems =
     region === Region.INDIA
       ? [
+          {
+            id: "static-home",
+            label: "Home",
+            href: "/",
+            type: "LINK",
+            isLoginLink: false,
+            order: -1,
+            groups: [],
+          },
           ...items,
           {
             id: "static-other",
@@ -165,7 +173,7 @@ function MegaNavbarContent({
   };
 
   return (
-    <header className="fixed top-10 left-0 right-0 z-50 w-full bg-gradient-to-b from-[#dff4d2] to-[#eef8ea]">
+    <header className="fixed top-10 left-0 right-0 z-50 w-full bg-white">
       <div ref={wrapperRef} className="relative">
         <div className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-8 sm:px-6">
           {/* Logo */}
@@ -176,7 +184,7 @@ function MegaNavbarContent({
             <Image
               src="/logo/ngologo.png"
               alt="NGO Experts Logo"
-              width={120}
+              width={200}
               height={120}
               priority
             />
@@ -219,7 +227,7 @@ function MegaNavbarContent({
                 >
                   {item.label}
                 </Link>
-              )
+              ),
             )}
           </nav>
 
@@ -227,12 +235,11 @@ function MegaNavbarContent({
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <Link
               href="https://wa.me/918929218091"
-                  target="_blank"
-              className="hidden h-[44px] items-center gap-2.5 rounded-[6px] hover:bg-lime-500 px-5 text-[15px] font-semibold text-white shadow-sm bg-green-700 md:flex"
+              target="_blank"
+              className="hidden h-[44px] items-center gap-2.5 rounded-[6px]  px-5 text-[15px]  text-black shadow-sm bg-white md:flex border border-yellow-900"
             >
               Schedule a call
             </Link>
-            
 
             {/* ✅ MOBILE HAMBURGER ONLY (ONLY small screens) */}
             <button
@@ -253,7 +260,7 @@ function MegaNavbarContent({
               .map((item) => {
                 const totalLinks = item.groups.reduce(
                   (acc, group) => acc + group.items.length,
-                  0
+                  0,
                 );
 
                 const isSmallMenu = totalLinks <= 5; // threshold
@@ -375,7 +382,7 @@ function MegaNavbarContent({
                       >
                         {item.label}
                       </Link>
-                    )
+                    ),
                   )}
 
                   {/* bottom section */}
@@ -384,7 +391,7 @@ function MegaNavbarContent({
                     <Link
                       href="tel:+918929218091"
                       onClick={handleMobileNavClick}
-                      className="flex h-[42px] w-full items-center justify-center rounded-xl bg-lime-500 text-[14px] font-semibold text-white shadow-sm hover:bg-green-700"
+                      className="flex h-[42px] w-full items-center justify-center rounded-xl bg-[#59A245] text-[14px] font-semibold text-white shadow-sm hover:bg-green-700"
                     >
                       Schedule a call
                     </Link>

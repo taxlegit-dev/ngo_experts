@@ -179,7 +179,7 @@ export const privacyPolicyData = {
             Contact us at{" "}
             <a
               href="mailto:support@ngoexperts.com"
-              className="text-lime-500 underline"
+              className="text-[#59A245] underline"
             >
               support@ngoexperts.com
             </a>{" "}

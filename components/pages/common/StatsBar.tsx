@@ -12,7 +12,7 @@ const stats: StatItem[] = [
 
 export default function StatsBar() {
   return (
-    <section className="bg-gradient-to-r from-lime-500 via-purple-300 to-purple-900 py-10 transition-colors duration-700">
+    <section className="bg-gradient-to-r from-[#59A245] via-purple-300 to-purple-900 py-10 transition-colors duration-700">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
           {stats.map((stat, index) => (

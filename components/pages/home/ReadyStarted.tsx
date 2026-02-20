@@ -10,7 +10,7 @@ export default function CallToActionBanner() {
       <div
         className="
         max-w-6xl mx-auto relative z-10 
-        bg-gradient-to-r from-purple-700 to-lime-500 rounded-2xl 
+        bg-gradient-to-r from-purple-700 to-[#59A245] rounded-2xl 
         px-8 md:px-16 py-10 
         flex flex-col md:flex-row items-center justify-between 
         shadow-2xl
@@ -119,7 +119,7 @@ export default function CallToActionBanner() {
         <div
           className="
           w-32 h-32
-          bg-gradient-to-br from-lime-500/10 to-cyan-500/10
+          bg-gradient-to-br from-[#59A245]/10 to-cyan-500/10
           rounded-full
           blur-2xl
         "

@@ -30,11 +30,14 @@ export default function OurClients() {
           className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900"
           data-aos="fade-down"
         >
-          Our <span className="text-lime-500">Clients</span>
+          Our{" "}
+          <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent">
+            Clients
+          </span>
         </h2>
 
         <p
-          className="mt-4 text-green-900/80 text-base md:text-lg font-medium"
+          className="mt-3 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
           data-aos="fade-down"
           data-aos-delay="100"
         >
@@ -51,7 +54,7 @@ export default function OurClients() {
             {[...clients, ...clients].map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[180px] md:w-[220px] h-[100px] md:h-[120px] bg-white rounded-xl border border-[#e1e5f0] shadow-md flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-lime-400 hover:shadow-[0_0_35px_rgba(163,230,53,0.45)]"
+                className="flex-shrink-0 w-[180px] md:w-[220px] h-[100px] md:h-[120px] bg-white rounded-xl border border-[#e1e5f0] shadow-md flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-[#59A245] hover:shadow-[0_0_35px_rgba(163,230,53,0.45)]"
               >
                 <img
                   src={logo}

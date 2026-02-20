@@ -54,7 +54,7 @@ export default function AIGenerator() {
           <button
             onClick={handleGenerate}
             disabled={isLoading}
-            className="w-full sm:w-auto sm:min-w-[150px] px-7 py-3 rounded-xl bg-lime-500 text-white hover:bg-green-700 disabled:opacity-60"
+            className="w-full sm:w-auto sm:min-w-[150px] px-7 py-3 rounded-xl bg-[#59A245] text-white hover:bg-green-700 disabled:opacity-60"
           >
             {isLoading ? "Generating..." : "AI Overview ✨"}
           </button>

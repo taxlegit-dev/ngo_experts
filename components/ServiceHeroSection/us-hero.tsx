@@ -28,7 +28,7 @@ export function UsHero({ hero }: UsHeroProps) {
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center ">
         {/* Announcement Banner */}
         {announcement && (
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-lime-500 to-purple-700 px-4 py-2 text-sm text-white shadow-lg">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#59A245] to-purple-700 px-4 py-2 text-sm text-white shadow-lg">
             <span className="rounded-full bg-green-700 px-2 py-0.5 text-xs font-semibold">
               New
             </span>

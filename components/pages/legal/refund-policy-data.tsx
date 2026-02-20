@@ -121,12 +121,12 @@ export const refundPolicyData = {
             Email:{" "}
             <a
               href="mailto:support@ngoexperts.com"
-              className="text-lime-500 underline"
+              className="text-[#59A245] underline"
             >
               support@ngoexperts.com
             </a>{" "}
             | Phone:{" "}
-            <a href="tel:+918929218091" className="text-lime-500 underline">
+            <a href="tel:+918929218091" className="text-[#59A245] underline">
               +91 89292 18091
             </a>
           </p>
@@ -243,4 +243,3 @@ export const refundPolicyData = {
     note: "Please keep your order number and purchase details ready for faster assistance.",
   },
 };
-

@@ -76,7 +76,7 @@ const Footer = () => {
       icon: <FaInstagram />,
       href: "https://www.instagram.com/ngoexperts/",
       label: "Instagram",
-      color: "hover:bg-lime-500",
+      color: "hover:bg-[#59A245]",
     },
     {
       icon: <FaFacebookF />,

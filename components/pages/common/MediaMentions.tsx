@@ -24,9 +24,12 @@ export default function MediaMentions() {
         {/* Heading */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
-            Featured Media <span className="text-lime-500">Mentions</span>
+            Featured Media{" "}
+            <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent">
+              Mentions
+            </span>
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             How to lay the foundation of your dream business: choosing between
             private limited, LLP, and OPC
           </p>

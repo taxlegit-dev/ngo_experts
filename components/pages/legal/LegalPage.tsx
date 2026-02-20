@@ -75,7 +75,7 @@ export default function LegalPage({
             <div className="flex items-center justify-center mb-6 gap-6">
               <div className="relative">
                 <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-xl"></div>
-                <div className="relative p-4 bg-gradient-to-br from-lime-500 to-purple-700 rounded-2xl shadow-xl">
+                <div className="relative p-4 bg-gradient-to-br from-[#59A245] to-purple-700 rounded-2xl shadow-xl">
                   {icon}
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function LegalPage({
                     className="w-full px-6 py-5 bg-white hover:bg-gray-50 transition-colors flex items-center justify-between"
                   >
                     <div className="flex items-center">
-                      <span className="w-8 h-8 bg-lime-500 text-white rounded-lg flex items-center justify-center mr-4 font-semibold">
+                      <span className="w-8 h-8 bg-[#59A245] text-white rounded-lg flex items-center justify-center mr-4 font-semibold">
                         {section.id}
                       </span>
                       <h2 className="text-lg font-semibold text-gray-900">
@@ -164,7 +164,7 @@ export default function LegalPage({
               ) : (
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <span className="w-8 h-8 bg-lime-500 text-white rounded-lg flex items-center justify-center mr-4 font-semibold">
+                    <span className="w-8 h-8 bg-[#59A245] text-white rounded-lg flex items-center justify-center mr-4 font-semibold">
                       {section.id}
                     </span>
                     <h2 className="text-lg font-semibold text-gray-900">
@@ -184,7 +184,7 @@ export default function LegalPage({
               className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <span className="w-8 h-8 bg-lime-500 text-white rounded-lg flex items-center justify-center mr-4 font-semibold">
+                <span className="w-8 h-8 bg-[#59A245] text-white rounded-lg flex items-center justify-center mr-4 font-semibold">
                   {section.id}
                 </span>
                 <h2 className="text-lg font-semibold text-gray-900">
@@ -224,7 +224,7 @@ export default function LegalPage({
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="text-lime-500 hover:text-green-700 transition-colors break-all"
+                        className="text-[#59A245] hover:text-green-700 transition-colors break-all"
                       >
                         {item.value}
                       </a>
@@ -237,7 +237,7 @@ export default function LegalPage({
               {contactInfo.note && (
                 <div className="mt-8 p-4 bg-purple-50 rounded-lg border border-purple-100">
                   <p className="text-center text-gray-700">
-                    <span className="font-semibold text-lime-500">Note:</span>{" "}
+                    <span className="font-semibold text-[#59A245]">Note:</span>{" "}
                     {contactInfo.note}
                   </p>
                 </div>

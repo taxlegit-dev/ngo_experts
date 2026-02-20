@@ -54,12 +54,12 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
         className={`rounded-2xl border transition-all duration-500 overflow-hidden
           ${
             isIndia
-              ? "bg-white border-slate-200 hover:border-lime-400"
-              : "bg-slate-900/70 backdrop-blur-xl border-slate-700 hover:border-lime-500"
+              ? "bg-white border-slate-200 hover:border-[#59A245]"
+              : "bg-slate-900/70 backdrop-blur-xl border-slate-700 hover:border-[#59A245]"
           }
           ${
             isOpen
-              ? "shadow-2xl scale-[1.02] ring-2 ring-lime-500/40"
+              ? "shadow-2xl scale-[1.02] ring-2 ring-[#59A245]/40"
               : "shadow-md hover:shadow-xl"
           }
           transform hover:scale-[1.01]
@@ -72,7 +72,7 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
           <span
             className={`text-lg font-semibold leading-tight transition-colors ${
               isIndia
-                ? "text-slate-900 group-hover:text-lime-500"
+                ? "text-slate-900 group-hover:text-[#59A245]"
                 : "text-white group-hover:text-lime-300"
             }`}
           >
@@ -83,8 +83,8 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
             className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-500 flex-shrink-0 ml-4
               ${
                 isIndia
-                  ? "bg-lime-100 text-green-700 group-hover:bg-lime-500 group-hover:text-white"
-                  : "bg-lime-500/15 text-lime-300 group-hover:bg-lime-500 group-hover:text-white"
+                  ? "bg-lime-100 text-green-700 group-hover:bg-[#59A245] group-hover:text-white"
+                  : "bg-[#59A245]/15 text-lime-300 group-hover:bg-[#59A245] group-hover:text-white"
               }
               ${isOpen ? "rotate-180 scale-110" : ""}
             `}
@@ -163,7 +163,7 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
             className={`absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20 ${
-              isIndia ? "bg-lime-400" : "bg-emerald-400"
+              isIndia ? "bg-[#59A245]" : "bg-emerald-400"
             }`}
             style={{ animation: "float 8s ease-in-out infinite" }}
           />
@@ -180,15 +180,13 @@ export function FAQSection({ questions, region }: FAQSectionProps) {
           {/* Centered Header Section */}
           <div className="text-center mb-12 space-y-4">
             <h2
-              className={`text-5xl font-extrabold leading-tight whitespace-nowrap ${
+              className={`text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight ${
                 isIndia ? "text-slate-900" : "text-white"
               }`}
               style={{ animation: "fadeInUp 0.6s ease-out 0.1s both" }}
             >
               Frequently Asked{" "}
-              <span
-                className="bg-gradient-to-r from-lime-500 to-green-700 bg-clip-text text-transparent"
-              >
+              <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent">
                 Questions
               </span>
             </h2>

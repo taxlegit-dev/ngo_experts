@@ -119,7 +119,7 @@ export default async function AuthorCard({
       </div>
 
       {/* Newsletter Signup */}
-      <div className="rounded-2xl bg-lime-500 p-4 sm:p-6 text-white">
+      <div className="rounded-2xl bg-[#59A245] p-4 sm:p-6 text-white">
         <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold">
           Stay Updated
         </h3>

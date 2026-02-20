@@ -32,7 +32,7 @@ export default function LeadershipTeam() {
               />
 
               <div className="flex-1">
-                <span className="text-sm font-medium text-lime-500">
+                <span className="text-sm font-medium text-[#59A245]">
                   Co-Founder & CEO
                 </span>
 
@@ -52,7 +52,7 @@ export default function LeadershipTeam() {
                 <div className="mt-4 flex gap-3">
                   <a
                     href="#"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border text-lime-500 transition hover:bg-lime-500 hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border text-[#59A245] transition hover:bg-[#59A245] hover:text-white"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedinIn size={16} />
@@ -60,7 +60,7 @@ export default function LeadershipTeam() {
 
                   <a
                     href="#"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border text-lime-500 transition hover:bg-lime-500 hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border text-[#59A245] transition hover:bg-[#59A245] hover:text-white"
                     aria-label="Twitter"
                   >
                     <FaTwitter size={16} />
@@ -83,7 +83,7 @@ export default function LeadershipTeam() {
               />
 
               <div className="flex-1">
-                <span className="text-sm font-medium text-lime-500">
+                <span className="text-sm font-medium text-[#59A245]">
                   Co-Founder & CEO
                 </span>
 
@@ -103,7 +103,7 @@ export default function LeadershipTeam() {
                 <div className="mt-4 flex gap-3">
                   <a
                     href="#"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border text-lime-500 transition hover:bg-lime-500 hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border text-[#59A245] transition hover:bg-[#59A245] hover:text-white"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedinIn size={16} />
@@ -111,7 +111,7 @@ export default function LeadershipTeam() {
 
                   <a
                     href="#"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border text-lime-500 transition hover:bg-lime-500 hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border text-[#59A245] transition hover:bg-[#59A245] hover:text-white"
                     aria-label="Twitter"
                   >
                     <FaTwitter size={16} />

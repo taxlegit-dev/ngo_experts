@@ -74,7 +74,7 @@ export default function AboutCompanyHero() {
               <div className="mt-10 space-y-6">
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-purple-100 p-3 text-lime-500">
+                  <div className="rounded-lg bg-purple-100 p-3 text-[#59A245]">
                     <Phone size={20} />
                   </div>
                   <div>
@@ -87,7 +87,7 @@ export default function AboutCompanyHero() {
 
                 {/* Location */}
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-purple-100 p-3 text-lime-500">
+                  <div className="rounded-lg bg-purple-100 p-3 text-[#59A245]">
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -100,7 +100,7 @@ export default function AboutCompanyHero() {
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="rounded-lg bg-purple-100 p-3 text-lime-500">
+                  <div className="rounded-lg bg-purple-100 p-3 text-[#59A245]">
                     <Mail size={20} />
                   </div>
                   <div>

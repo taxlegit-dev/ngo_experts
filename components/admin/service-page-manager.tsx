@@ -24,7 +24,7 @@ const EditorJsEditor = dynamic(
         Loading editor...
       </div>
     ),
-  }
+  },
 );
 
 function tryParseEditorJson(content: string): OutputData | null {
@@ -92,7 +92,7 @@ export function ServicePageManager({
   const router = useRouter();
   const searchParams = useSearchParams();
   const [expandedSections, setExpandedSections] = useState<Set<number>>(
-    new Set([0])
+    new Set([0]),
   );
   const [savingSection, setSavingSection] = useState<number | null>(null);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
@@ -129,7 +129,7 @@ export function ServicePageManager({
     pageType === "SERVICE" ? "/admin/service-pages" : "/admin/generic-pages";
 
   const selectedItem = navItems.find(
-    (item) => item.id === (selectedItemId || selectedNavbarItemId)
+    (item) => item.id === (selectedItemId || selectedNavbarItemId),
   );
   const previewHref =
     selectedItem?.href && selectedItem.href.startsWith("/")
@@ -216,7 +216,7 @@ export function ServicePageManager({
         `/api/admin/service-pages?id=${existingServicePage.id}`,
         {
           method: "DELETE",
-        }
+        },
       );
 
       const result = await response.json();
@@ -369,7 +369,7 @@ export function ServicePageManager({
         `/api/admin/service-page-sections?id=${section.id}`,
         {
           method: "DELETE",
-        }
+        },
       );
 
       const result = await response.json();
@@ -401,7 +401,7 @@ export function ServicePageManager({
   if (!selectedItemId && !selectedNavbarItemId) {
     return (
       <div className="space-y-6">
-        <div className="rounded-3xl border border-lime-500 bg-white p-8 shadow-sm">
+        <div className="rounded-3xl border border-[#59A245] bg-white p-8 shadow-sm">
           <h2 className="text-xl font-semibold text-slate-900 mb-4">
             Select a {pageLabel}
           </h2>
@@ -549,7 +549,7 @@ export function ServicePageManager({
                   const currentSections = form.getValues("sections");
                   const maxOrder = Math.max(
                     ...currentSections.map((s, i) => s.order || i + 1),
-                    0
+                    0,
                   );
                   const newIndex = fields.length;
                   append({
@@ -721,7 +721,7 @@ export function ServicePageManager({
                                 shouldDirty: true,
                                 shouldValidate: false,
                                 shouldTouch: false,
-                              }
+                              },
                             );
                           }}
                           placeholder=""
@@ -761,8 +761,8 @@ export function ServicePageManager({
                         {savingSection === index
                           ? "Saving..."
                           : field?.id
-                          ? `Update Section ${index + 1}`
-                          : `Save Section ${index + 1}`}
+                            ? `Update Section ${index + 1}`
+                            : `Save Section ${index + 1}`}
                       </button>
                     </div>
                   )}

@@ -64,7 +64,7 @@ export function IndiaHero({
 
           // Check for reduced motion preference
           const prefersReducedMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
+            "(prefers-reduced-motion: reduce)",
           ).matches;
 
           if (prefersReducedMotion) {
@@ -103,7 +103,7 @@ export function IndiaHero({
           });
         }
       },
-      { threshold: 0.3 } // 30% visible होने पर trigger होगा
+      { threshold: 0.3 }, // 30% visible होने पर trigger होगा
     );
 
     observer.observe(statsRef.current);
@@ -141,7 +141,7 @@ export function IndiaHero({
                 {benefits.map((benefit: string, index: number) => (
                   <div key={index} className="flex items-start gap-2">
                     <svg
-                      className="w-6 h-6 text-lime-500 flex-shrink-0 mt-0.5"
+                      className="w-6 h-6 text-[#59A245] flex-shrink-0 mt-0.5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

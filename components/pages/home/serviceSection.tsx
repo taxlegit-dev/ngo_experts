@@ -97,9 +97,12 @@ export default function ServicesSection() {
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
-            Our <span className="text-lime-500">Services</span>
+            Our{" "}
+            <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent">
+              Services
+            </span>
           </h2>
-          <p className="mt-3 text-base md:text-lg text-green-900/80 font-medium max-w-2xl mx-auto">
+          <p className="mt-3 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Comprehensive NGO registration, compliance, and advisory services to
             help your organization grow with confidence.
           </p>
@@ -118,7 +121,7 @@ export default function ServicesSection() {
                   className="group relative h-[310px] rounded-xl border border-[#e1e5f0] bg-white pt-16 px-6 pb-6
                              shadow-md transition-all duration-300
                              hover:-translate-y-2
-                             hover:border-lime-400
+                             hover:border-[#59A245]
                              hover:shadow-[0_0_35px_rgba(163,230,53,0.45)] flex flex-col justify-between"
                 >
                   {/* Icon */}
@@ -129,7 +132,7 @@ export default function ServicesSection() {
                                transition-all duration-300
                                group-hover:shadow-[0_0_20px_rgba(163,230,53,0.6)]"
                   >
-                    <Icon className="h-8 w-8 text-lime-500" />
+                    <Icon className="h-8 w-8 text-[#59A245]" />
                   </div>
 
                   <div>
@@ -148,7 +151,7 @@ export default function ServicesSection() {
                   <div className="text-center">
                     <Link
                       href={service.href}
-                      className="inline-block rounded-full border border-lime-500 px-5 py-2 text-sm font-semibold text-lime-600 transition-all duration-300 hover:bg-lime-500 hover:text-white hover:shadow-lg"
+                      className="inline-block rounded-full border border-[#59A245] px-5 py-2 text-sm font-semibold text-lime-600 transition-all duration-300 hover:bg-[#59A245] hover:text-white hover:shadow-lg"
                     >
                       Read More →
                     </Link>

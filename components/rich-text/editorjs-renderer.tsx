@@ -129,7 +129,7 @@ function ReadMoreHtml({
       {isLong && (
         <label
           htmlFor={contentId}
-          className="read-more-button block mx-auto  text-lg text-lime-500 hover:text-purple-700 cursor-pointer underline text-center"
+          className="read-more-button block mx-auto  text-lg text-[#59A245] hover:text-purple-700 cursor-pointer underline text-center"
         >
           <span className="read-more-label-collapsed">Read more</span>
           <span className="read-more-label-expanded">Read less</span>
@@ -183,7 +183,7 @@ function ReadMoreText({
       {isLong && (
         <label
           htmlFor={contentId}
-          className="read-more-button ml-2 text-sm text-lime-500 hover:text-purple-700 cursor-pointer"
+          className="read-more-button ml-2 text-sm text-[#59A245] hover:text-purple-700 cursor-pointer"
         >
           <span className="read-more-label-collapsed">Read more</span>
           <span className="read-more-label-expanded">Read less</span>
@@ -195,7 +195,7 @@ function ReadMoreText({
 
 function getBlockAlignment(
   block: OutputData["blocks"][0],
-  html?: string
+  html?: string,
 ): React.CSSProperties {
   const tunes = (
     block as { tunes?: { textAlignTune?: { alignment?: string } } }
@@ -227,7 +227,7 @@ export function EditorJsRenderer({
   const contentClass =
     theme === "dark"
       ? "prose prose-invert prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-purple-400 prose-a:no-underline hover:prose-a:text-purple-300 prose-a:transition-colors prose-strong:text-slate-100 prose-strong:font-semibold prose-code:text-purple-400 prose-code:bg-slate-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded"
-      : "prose prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-lime-500 prose-a:no-underline hover:prose-a:text-purple-700 prose-a:transition-colors prose-strong:text-slate-900 prose-strong:font-semibold prose-code:text-lime-500 prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded";
+      : "prose prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-[#59A245] prose-a:no-underline hover:prose-a:text-purple-700 prose-a:transition-colors prose-strong:text-slate-900 prose-strong:font-semibold prose-code:text-[#59A245] prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded";
 
   return (
     <>
@@ -280,7 +280,7 @@ export function EditorJsRenderer({
 function renderBlock(
   block: OutputData["blocks"][0],
   theme: "light" | "dark",
-  fullBleedColumns: boolean
+  fullBleedColumns: boolean,
 ): React.ReactNode {
   const textColor = theme === "dark" ? "text-slate-300" : "text-black";
   const headingColor = theme === "dark" ? "text-slate-50" : "text-slate-800";
@@ -394,8 +394,8 @@ function renderBlock(
                           ? "bg-slate-900"
                           : "bg-slate-50"
                         : theme === "dark"
-                        ? "bg-slate-950"
-                        : "bg-white"
+                          ? "bg-slate-950"
+                          : "bg-white"
                     }`}
                   >
                     {row.map((cell: string, cellIdx: number) => {
@@ -443,14 +443,14 @@ function renderBlock(
         imageData.alignment === "left"
           ? "float-left mr-6 mb-4"
           : imageData.alignment === "right"
-          ? "float-right ml-6 mb-4"
-          : "mx-auto";
+            ? "float-right ml-6 mb-4"
+            : "mx-auto";
 
       const containerClass = imageData.stretched
         ? "w-full"
         : imageData.alignment === "center" || !imageData.alignment
-        ? "flex justify-center"
-        : "";
+          ? "flex justify-center"
+          : "";
 
       const imageElement = (
         <div
@@ -584,7 +584,11 @@ function renderBlock(
               <div className="relative w-full max-w-[500px] aspect-[5/3] overflow-hidden rounded-lg">
                 <Image
                   src={columnData.imageUrl}
-                  alt={columnData.imageAltText || columnData.heading || "Column image"}
+                  alt={
+                    columnData.imageAltText ||
+                    columnData.heading ||
+                    "Column image"
+                  }
                   width={500}
                   height={300}
                   className="max-w-full max-h-full object-contain"
@@ -635,7 +639,7 @@ function renderBlock(
                   <li key={idx} className="flex items-start">
                     <span
                       className={`mr-2 mt-3 flex-shrink-0 w-1.5 h-1.5 rounded-full ${
-                        theme === "dark" ? "bg-purple-400" : "bg-lime-500"
+                        theme === "dark" ? "bg-purple-400" : "bg-[#59A245]"
                       }`}
                     />
                     <span className="text-lg leading-relaxed text-gray-800 ">
@@ -719,8 +723,8 @@ function renderBlock(
         align === "left"
           ? "justify-start"
           : align === "right"
-          ? "justify-end"
-          : "justify-center";
+            ? "justify-end"
+            : "justify-center";
 
       return (
         <div key={block.id} className={`my-8 flex ${alignmentClass}`}>
@@ -755,10 +759,10 @@ function renderBlock(
         perRow === 2
           ? "grid-cols-1 sm:grid-cols-2"
           : perRow === 3
-          ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-          : perRow === 4
-          ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-          : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5";
+            ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+            : perRow === 4
+              ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+              : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5";
 
       return (
         <section key={block.id} className="py-5">
@@ -781,7 +785,11 @@ function renderBlock(
                   <div className="mb-4 flex justify-center">
                     <Image
                       src={normalizeUrl(card.icon)}
-                      alt={card.iconAltText || decodeHtmlEntities(card.heading) || "Card icon"}
+                      alt={
+                        card.iconAltText ||
+                        decodeHtmlEntities(card.heading) ||
+                        "Card icon"
+                      }
                       width={64}
                       height={64}
                       unoptimized

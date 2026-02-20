@@ -18,7 +18,7 @@ export default function Calendly() {
           url="https://calendly.com/121-taxlegit/30min"
           rootElement={rootElement}
           text="Schedule a call"
-          className="h-[44px] rounded-[6px] bg-lime-500 px-5 text-[15px] font-semibold text-white shadow-sm hover:bg-green-700"
+          className="h-[44px] rounded-[6px] bg-[#59A245] px-5 text-[15px] font-semibold text-white shadow-sm hover:bg-green-700"
         />
       )}
     </div>

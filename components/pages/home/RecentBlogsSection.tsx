@@ -59,9 +59,12 @@ export default function RecentBlogsSection() {
         {/* Heading */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
-            Recent <span className="text-lime-500">Blogs</span>
+            Recent{" "}
+            <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent">
+              Blogs
+            </span>
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Stay updated with our latest insights and tips on business
             registration, compliance, and more.
           </p>
@@ -141,7 +144,7 @@ export default function RecentBlogsSection() {
         <div className="flex justify-center mt-12 md:mt-16">
           <Link
             href="/blogs"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-700 to-emerald-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-[#59A245] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             <span className="text-base md:text-lg">View All Blogs</span>
             <div className="relative w-6 h-6 flex items-center justify-center">

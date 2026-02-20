@@ -24,7 +24,7 @@ export default function NotFound() {
         </p>
         <button
           onClick={() => router.push("/")}
-          className="inline-flex items-center justify-center rounded-lg bg-lime-500 px-5 py-2 text-white font-semibold hover:bg-green-700 transition"
+          className="inline-flex items-center justify-center rounded-lg bg-[#59A245] px-5 py-2 text-white font-semibold hover:bg-green-700 transition"
         >
           Go to Home
         </button>

@@ -105,7 +105,7 @@ export default function OurProduct() {
                     href={feature.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-lime-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-green-700 hover:gap-3"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#59A245] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-green-700 hover:gap-3"
                   >
                     Explore Now
                     <RiArrowRightLine className="text-lg" />
@@ -113,7 +113,7 @@ export default function OurProduct() {
                 ) : (
                   <Link
                     href={feature.link}
-                    className="inline-flex items-center gap-2 rounded-full bg-lime-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-green-700 hover:gap-3"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#59A245] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-green-700 hover:gap-3"
                   >
                     Explore Now
                     <RiArrowRightLine className="text-lg" />

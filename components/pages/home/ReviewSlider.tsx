@@ -145,8 +145,11 @@ export default function ReviewSlider() {
             </span>
           </div>
 
-          <h2 className="text-2xl lg:text-5xl font-bold mb-4 text-slate-700">
-            Based on 131 reviews
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
+            Based on 131{" "}
+            <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent">
+              reviews
+            </span>
           </h2>
         </div>
 
@@ -164,7 +167,7 @@ export default function ReviewSlider() {
               >
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Quote className="w-16 h-16 text-lime-500" />
+                  <Quote className="w-16 h-16 text-[#59A245]" />
                 </div>
 
                 {/* Profile Section */}
@@ -221,7 +224,7 @@ export default function ReviewSlider() {
             <button
               type="button"
               onClick={handlePrev}
-              className="pointer-events-auto h-12 w-12 rounded-full bg-white shadow-lg text-lime-500 grid place-items-center hover:bg-green-700 hover:text-white transform hover:scale-110 active:scale-95 transition-all duration-300 -ml-6"
+              className="pointer-events-auto h-12 w-12 rounded-full bg-white shadow-lg text-[#59A245] grid place-items-center hover:bg-green-700 hover:text-white transform hover:scale-110 active:scale-95 transition-all duration-300 -ml-6"
               aria-label="Previous"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -229,7 +232,7 @@ export default function ReviewSlider() {
             <button
               type="button"
               onClick={handleNext}
-              className="pointer-events-auto h-12 w-12 rounded-full bg-white shadow-lg text-lime-500 grid place-items-center hover:bg-green-700 hover:text-white transform hover:scale-110 active:scale-95 transition-all duration-300 -mr-6"
+              className="pointer-events-auto h-12 w-12 rounded-full bg-white shadow-lg text-[#59A245] grid place-items-center hover:bg-green-700 hover:text-white transform hover:scale-110 active:scale-95 transition-all duration-300 -mr-6"
               aria-label="Next"
             >
               <ChevronRight className="w-6 h-6" />
@@ -245,7 +248,7 @@ export default function ReviewSlider() {
               onClick={() => setCurrentIndex(idx)}
               className={`transition-all duration-300 rounded-full ${
                 idx === currentIndex
-                  ? "w-8 h-3 bg-lime-500"
+                  ? "w-8 h-3 bg-[#59A245]"
                   : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Go to slide ${idx + 1}`}

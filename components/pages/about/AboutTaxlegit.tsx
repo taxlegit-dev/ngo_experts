@@ -31,7 +31,7 @@ export default function AboutUsSection() {
             </div>
 
             {/* Badge */}
-            <div className="absolute right-1 -top-16 z-20 rounded-2xl bg-lime-500 px-6 py-4 text-center text-white shadow-lg">
+            <div className="absolute right-1 -top-16 z-20 rounded-2xl bg-[#59A245] px-6 py-4 text-center text-white shadow-lg">
               <p className="text-sm font-medium">Trusted by</p>
               <p className="text-xl font-bold">10,000+</p>
               <p className="text-sm">NGO&apos;s</p>
@@ -40,7 +40,7 @@ export default function AboutUsSection() {
 
           {/* RIGHT – CONTENT */}
           <div>
-            <h1 className="mb-3 text-lg font-semibold uppercase tracking-wide text-lime-500">
+            <h1 className="mb-3 text-lg font-semibold uppercase tracking-wide text-[#59A245]">
               About Us
             </h1>
 
@@ -100,7 +100,7 @@ function ServiceItem({
 }) {
   return (
     <div className="flex gap-4">
-      <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-lime-500 text-white">
+      <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#59A245] text-white">
         ✓
       </div>
       <div>
