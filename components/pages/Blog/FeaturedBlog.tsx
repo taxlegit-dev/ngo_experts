@@ -97,12 +97,12 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
     <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10">
       <div className="grid gap-6 md:gap-8 lg:gap-10 rounded-3xl lg:grid-cols-2 ">
         {/* LEFT : IMAGE */}
-        <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 w-full overflow-hidden rounded-2xl order-1 lg:order-1">
+        <div className="relative w-full overflow-hidden rounded-2xl order-1 lg:order-1 bg-slate-100 aspect-[16/9] ">
           <Image
             src={imageSrc}
             alt={blog.title}
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
             priority
             unoptimized
