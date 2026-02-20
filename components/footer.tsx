@@ -55,14 +55,8 @@ const Footer = () => {
   const popularLicenses = [
     { name: "Blog", href: "/blogs" },
     { name: "About Us", href: "/about-us" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Term & Conditions", href: "/term-and-conditions" },
-  ];
-
-  const companyLinks = [
-    { name: "About Us", href: "about-us" },
-    { name: "Blog", href: "blogs" },
-    { name: "Contact Us", href: "contact-us" },
+    { name: "Calculate Quote", href: "/calculateQuote" },
+    { name: "Contact us", href: "/contact-us" },
   ];
 
   const legalLinks = [
@@ -266,7 +260,7 @@ const Footer = () => {
               {/* Popular Licenses */}
               <div className="space-y-6 ">
                 <h3 className="text-lg font-semibold text-white border-l-4 border-cyan-500 pl-3">
-                  Other Services
+                  Other
                 </h3>
                 <ul className="space-y-3">
                   {popularLicenses.map((item, index) => (
@@ -285,25 +279,6 @@ const Footer = () => {
 
               {/* Quick Links */}
               <div className="space-y-8">
-                <div>
-                  <h3 className="text-lg font-semibold text-white border-l-4 border-[#59A245] pl-3">
-                    Company
-                  </h3>
-                  <ul className="space-y-3 mt-4">
-                    {companyLinks.map((item, index) => (
-                      <li key={index}>
-                        <a
-                          href={item.href}
-                          className="group flex items-center text-gray-400 hover:text-white transition-colors duration-300"
-                        >
-                          <FaChevronRight className="mr-2 text-[#59A245] text-xs opacity-0 group-hover:opacity-100 transition-opacity" />
-                          <span>{item.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
                 <div>
                   <h3 className="text-lg font-semibold text-white border-l-4 border-gray-500 pl-3">
                     Legal

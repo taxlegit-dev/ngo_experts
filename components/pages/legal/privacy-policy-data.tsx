@@ -4,24 +4,23 @@ import { Shield } from "lucide-react";
 export const privacyPolicyData = {
   title: "Privacy Policy",
   subtitle:
-    "Welcome to NGO Experts, India&apos;s most trusted partner for tax solutions and business compliance. At NGO Experts, managing your business set-up while maintaining privacy is our top priority.",
+    "At NGOExperts, we value your trust. This Privacy Policy explains how we collect, use, protect, and share your data when you use our website or services.",
   icon: <Shield className="w-12 h-12" strokeWidth={2} />,
-  badgeText: "GDPR, CCPA & Indian Data Protection Compliant",
+  badgeText: "Your Privacy Matters",
 
   introduction: (
     <>
       <p className="text-gray-800 leading-relaxed mb-4">
-        We know that when you choose us, you&apos;re putting your trust in our
-        hands. That&apos;s why we&apos;re committed to protecting your personal
-        information with zero compromises. This Privacy Policy explains, in
-        straightforward language, exactly how we collect, use, and keep your
-        data safe whenever you use our website or services.
+        At NGOExperts, we value your trust. When you share your information with
+        us -- whether as an individual, a team, or an organization -- you are
+        not just filling out a form. You are handing us something important. We
+        take that responsibility seriously.
       </p>
       <p className="text-gray-800 leading-relaxed">
-        You can feel confident knowing we strictly adhere to the latest industry
-        regulations—like GDPR, CCPA, and all applicable Indian Data Protection
-        Laws—to give your information the highest level of security and
-        transparency. With NGO Experts, your privacy truly is our promise.
+        This Privacy Policy explains how we collect, use, protect, and share
+        your data when you interact with us through our website ngoexperts.com
+        or use any of our services. By continuing to use our platform, you agree
+        to the practices described here.
       </p>
     </>
   ),
@@ -29,98 +28,97 @@ export const privacyPolicyData = {
   sections: [
     {
       id: 1,
-      title: "Information We Collect",
+      title: "Who We Are",
       expandable: true,
       content: (
-        <div className="space-y-6 text-black">
-          <p className="text-gray-700">
-            We collect information necessary to deliver seamless tax and
-            compliance services. This includes:
+        <div className="space-y-4 text-gray-700">
+          <p>
+            NGOExperts.com is a professional service platform that helps
+            individuals and groups register and manage NGOs, Section 8
+            Companies, Societies, and Trusts across India. Our offerings
+            include:
           </p>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold mb-3">Personal Information</h4>
-              <ul className="space-y-2 text-gray-700 list-disc pl-5">
-                <li>Name, email address, phone number, and postal address</li>
-                <li>
-                  Business details (firm name, GST number, PAN, registration
-                  data)
-                </li>
-              </ul>
-            </div>
-
-            <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold mb-3">Transaction Information</h4>
-              <ul className="space-y-2 text-gray-700 list-disc pl-5">
-                <li>Payment and billing details (securely processed)</li>
-                <li>Invoices, service requests, and order history</li>
-              </ul>
-            </div>
-
-            <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold mb-3">Technical & Usage Data</h4>
-              <ul className="space-y-2 text-gray-700 list-disc pl-5">
-                <li>IP address, browser type, and device identifiers</li>
-                <li>Session duration, pages visited, and location data</li>
-                <li>Cookies and tracking technologies</li>
-              </ul>
-            </div>
-
-            <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold mb-3">Communications</h4>
-              <p className="text-gray-700">
-                Emails, chats, and support inquiries to help us assist you
-                better.
-              </p>
-            </div>
-          </div>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Registration services</li>
+            <li>Compliance support (12A, 80G, FCRA, CSR, etc.)</li>
+            <li>Document filing and tracking</li>
+            <li>Advisory and consulting services</li>
+            <li>CSR Implementation and Advisory Services</li>
+            <li>CSR Funding Connections & Corporate Liaison</li>
+            <li>Project Proposal Writing & Donor Pitch Decks</li>
+          </ul>
+          <p>
+            In the course of providing these services, we may collect and
+            process certain personal and organizational data to help you meet
+            your legal and regulatory needs efficiently.
+          </p>
         </div>
       ),
     },
 
     {
       id: 2,
-      title: "How We Use Your Data",
+      title: "Information We Collect",
       expandable: true,
       content: (
-        <div className="space-y-4">
-          <p className="text-gray-700">
-            We use your data responsibly to enhance your experience and ensure
-            service excellence.
+        <div className="space-y-4 text-gray-700">
+          <p>
+            We collect the information you share with us so we can deliver
+            services effectively. This typically includes:
           </p>
-
-          <ul className="space-y-3 list-disc pl-6 text-gray-700">
-            <li>Improve platform performance and usability</li>
-            <li>Deliver personalized recommendations</li>
-            <li>Provide fast and accurate customer support</li>
-            <li>Process secure payments and transactions</li>
-            <li>Prevent fraud and strengthen system security</li>
-          </ul>
-
-          <div className="bg-green-50 p-4 rounded-lg">
-            <p className="text-gray-900 font-semibold">
-              Important: We never sell your personal information.
-            </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="p-5 border rounded-lg">
+              <h4 className="font-semibold mb-3">Personal Information</h4>
+              <ul className="space-y-2 list-disc pl-5">
+                <li>Name, mobile number, email address</li>
+                <li>Residential or office address</li>
+                <li>Identity documents (e.g., PAN, Aadhaar)</li>
+                <li>Communication records (emails, calls)</li>
+              </ul>
+            </div>
+            <div className="p-5 border rounded-lg">
+              <h4 className="font-semibold mb-3">Organizational Details</h4>
+              <ul className="space-y-2 list-disc pl-5">
+                <li>NGO/Entity name and objectives</li>
+                <li>Board member details</li>
+                <li>Registration numbers (PAN, TAN, etc.)</li>
+                <li>Bank account details (for compliance, if applicable)</li>
+              </ul>
+            </div>
+            <div className="p-5 border rounded-lg md:col-span-2">
+              <h4 className="font-semibold mb-3">Website & Usage Data</h4>
+              <ul className="space-y-2 list-disc pl-5">
+                <li>Device type, IP address, browser information</li>
+                <li>How you navigate and use our website</li>
+                <li>Cookies and tracking data (for performance and experience)</li>
+              </ul>
+            </div>
           </div>
+          <p>
+            We collect this information through forms, emails, calls, direct
+            uploads, and during consultations.
+          </p>
         </div>
       ),
     },
 
     {
       id: 3,
-      title: "Who We Share Your Data With",
+      title: "Why We Collect Your Data",
       expandable: true,
       content: (
         <div className="space-y-4 text-gray-700">
-          <p>Your data is shared only when necessary with:</p>
+          <p>We only collect what is necessary -- and always with a clear purpose.</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Trusted technology and payment partners</li>
-            <li>Government or regulatory authorities when legally required</li>
-            <li>Auditors and legal advisors for compliance purposes</li>
+            <li>To process your NGO or company registration</li>
+            <li>To prepare and file required compliance documents</li>
+            <li>To stay in touch and update you about your project</li>
+            <li>To respond to your queries or support tickets</li>
+            <li>To meet any legal, regulatory, or audit requirements</li>
+            <li>To improve our services and website functionality</li>
           </ul>
           <p className="font-medium">
-            We do not sell or lease your data to third parties.
+            We do not sell, rent, or trade your information to anyone.
           </p>
         </div>
       ),
@@ -128,17 +126,22 @@ export const privacyPolicyData = {
 
     {
       id: 4,
-      title: "Cookies & Tracking Technologies",
+      title: "How We Keep Your Data Secure",
       expandable: true,
       content: (
         <div className="space-y-4 text-gray-700">
           <p>
-            We use cookies to improve site functionality, analytics, and user
-            preferences.
+            We store your data using secure systems, trusted service providers,
+            and encryption wherever necessary. We take all reasonable steps to:
           </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Prevent unauthorized access</li>
+            <li>Avoid accidental loss or misuse</li>
+            <li>Restrict access only to authorized personnel</li>
+          </ul>
           <p>
-            You may disable cookies via browser settings, though some features
-            may be limited.
+            While no digital platform is immune to risks, we maintain
+            industry-standard protocols and review our practices regularly.
           </p>
         </div>
       ),
@@ -146,17 +149,29 @@ export const privacyPolicyData = {
 
     {
       id: 5,
-      title: "Data Security & Best Practices",
+      title: "When and Why We Share Information",
       expandable: true,
       content: (
         <div className="space-y-4 text-gray-700">
           <p>
-            We implement industry-standard safeguards including encryption,
-            access controls, and secure infrastructure.
+            In some cases, we need to share your data with third parties -- but
+            only when necessary, and only with trusted partners. These may
+            include:
           </p>
-          <p className="italic">
-            While no system is completely immune, we continuously improve our
-            defenses.
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              Government authorities and regulatory portals (e.g., MCA, NGO
+              Darpan, Income Tax Department)
+            </li>
+            <li>
+              Chartered Accountants, Company Secretaries, and legal professionals
+              working on your project
+            </li>
+            <li>Payment gateways (for secure transaction processing)</li>
+          </ul>
+          <p className="font-medium">
+            We never share your data for marketing or advertising purposes with
+            third parties.
           </p>
         </div>
       ),
@@ -164,26 +179,72 @@ export const privacyPolicyData = {
 
     {
       id: 6,
-      title: "Your Data Protection Rights",
+      title: "Your Rights and Choices",
       expandable: true,
       content: (
         <div className="space-y-4 text-gray-700">
           <ul className="list-disc pl-6 space-y-2">
-            <li>Access and review your personal data</li>
-            <li>Request corrections or updates</li>
-            <li>Request deletion (subject to legal obligations)</li>
-            <li>Opt out of non-essential communications</li>
+            <li>Request access to your data</li>
+            <li>Ask us to correct or update inaccurate information</li>
+            <li>Request deletion (where legally permitted)</li>
+            <li>
+              Withdraw your consent at any time (though this may limit our
+              ability to provide services)
+            </li>
           </ul>
-
           <p>
-            Contact us at{" "}
+            Simply write to{" "}
             <a
               href="mailto:support@ngoexperts.com"
               className="text-[#59A245] underline"
             >
               support@ngoexperts.com
             </a>{" "}
-            to exercise your rights.
+            to raise any of these requests. We aim to respond within 7 working
+            days.
+          </p>
+        </div>
+      ),
+    },
+
+    {
+      id: 7,
+      title: "Cookies and Tracking Technologies",
+      expandable: true,
+      content: (
+        <div className="space-y-4 text-gray-700">
+          <p>
+            We use cookies to understand how visitors use our site and to
+            improve user experience. Cookies help us:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Analyze traffic and performance</li>
+            <li>Remember user preferences</li>
+            <li>Improve page speed and navigation</li>
+          </ul>
+          <p>
+            You can disable cookies via your browser settings if you prefer,
+            though some site functions may be affected.
+          </p>
+        </div>
+      ),
+    },
+
+    {
+      id: 8,
+      title: "Data Retention",
+      expandable: true,
+      content: (
+        <div className="space-y-4 text-gray-700">
+          <p>We retain your data only as long as necessary:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>To complete the services you have requested</li>
+            <li>To comply with legal and financial record-keeping requirements</li>
+            <li>To provide post-service support and documentation if needed</li>
+          </ul>
+          <p>
+            After that, we either delete your data securely or anonymize it for
+            internal use.
           </p>
         </div>
       ),
@@ -192,22 +253,16 @@ export const privacyPolicyData = {
 
   staticSections: [
     {
-      id: 7,
+      id: 9,
       title: "Third-Party Links",
       content:
-        "Our website may include links to external sites. We are not responsible for their privacy practices.",
+        "Our website may occasionally link to external websites (e.g., government portals, blog references). We do not control those sites and their privacy practices. We recommend reviewing their policies separately if you visit them.",
     },
     {
-      id: 8,
-      title: "Policy Updates",
+      id: 10,
+      title: "Updates to This Policy",
       content:
-        "We may update this policy periodically. Changes will be reflected on this page.",
-    },
-    {
-      id: 9,
-      title: "Your Consent",
-      content:
-        "By using our services, you consent to the collection and use of data as described.",
+        "As our services evolve and laws change, this Privacy Policy may be updated. Any changes will be posted on this page with a new Effective Date. Significant updates may also be communicated via email or on-site notices. We encourage you to review this page from time to time to stay informed.",
     },
   ],
 
@@ -224,12 +279,7 @@ export const privacyPolicyData = {
       { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
       {
         title: "Website",
-        value: "NGO Experts.com",
-        href: "https://NGO Experts.com",
-      },
-      {
-        title: "Website",
-        value: "NGO Experts.com",
+        value: "ngoexperts.com",
         href: "https://ngoexperts.com",
       },
     ],

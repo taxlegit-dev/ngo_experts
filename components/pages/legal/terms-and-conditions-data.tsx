@@ -1,87 +1,64 @@
 import React from "react";
 import Link from "next/link";
-import {
-  FileText,
-  Shield,
-  AlertTriangle,
-  Scale,
-  Users,
-  Clock,
-  Lock,
-} from "lucide-react";
+import { FileText, AlertTriangle, Scale, Users, Clock, Lock } from "lucide-react";
 
 export const termsAndConditionsData = {
   title: "Terms & Conditions",
   subtitle:
-    "By visiting our website and accessing the information, resources, services, and products we provide, you understand and agree to accept and adhere to the following terms and conditions.",
+    "These terms and conditions outline the rules for using NGOExperts and our services. By using our site or working with us, you agree to these terms.",
   icon: <FileText className="w-12 h-12" strokeWidth={2} />,
   badgeText: "Clear, Transparent & Fair Terms",
   introduction: (
     <>
       <p className="text-gray-800 leading-relaxed mb-4">
-        At NGO Experts, we&apos;re committed to simplifying business setup and
-        compliance for entrepreneurs. Since we are operating online, it is
-        important to outline our terms and conditions clearly and upfront.
+        Hey there! Welcome to NGOExperts -- your trusted partner in setting up
+        and supporting NGOs across India. Whether you are just starting your
+        nonprofit journey or managing compliance for an existing one, we are
+        here to help make the process simpler and smoother.
       </p>
-      <p className="text-gray-800 leading-relaxed mb-4">
-        This agreement outlines our scope of services, client responsibilities,
-        and how we keep things transparent and ethical. As a client availing NGO
-        Experts services, you agree to the following terms and conditions.
-      </p>
-      <p className="text-gray-800 leading-relaxed font-medium">
-        If you have any issues related to our services, please reach out to us
-        by visiting our website NGO Experts.com and talk to an expert.
+      <p className="text-gray-800 leading-relaxed">
+        These terms and conditions outline the rules governing your use of our
+        website and services. Please read them carefully. By using our site or
+        working with us, you agree to all terms mentioned here. If something
+        does not sit right with you, we respect your decision, but we kindly ask
+        that you refrain from using our platform or services.
       </p>
     </>
   ),
   sections: [
     {
       id: 1,
-      title: "About Our Services",
+      title: "What We Do (and What We Don't)",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <p className="text-gray-700 leading-relaxed">
-            Welcome to NGO Experts! This website is owned and operated by NGO
-            Experts Consulting Private Limited, 1117, Supertech Astralis,
-            Sec-94, Noida, Uttar Pradesh-201301, India.
+        <div className="space-y-4 text-gray-700">
+          <p>
+            NGOExperts helps individuals, social workers, and organisations
+            start and manage NGOs by offering end-to-end support. Services
+            include:
           </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
-              <div className="flex items-center mb-3">
-                <Shield className="w-5 h-5 text-[#59A245] mr-2" />
-                <h4 className="font-semibold text-gray-900">
-                  Information Requirement
-                </h4>
-              </div>
-              <p className="text-gray-700">
-                To access our resources, you may be required to provide certain
-                information about yourself (such as identification, email, phone
-                number, contact details, etc.) and ensure that all the
-                information you provide is accurate and up to date.
-              </p>
-            </div>
-            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
-              <div className="flex items-center mb-3">
-                <Scale className="w-5 h-5 text-[#59A245] mr-2" />
-                <h4 className="font-semibold text-gray-900">
-                  Scope of Services
-                </h4>
-              </div>
-              <p className="text-gray-700">
-                We do not provide legal advice; our role is to assist and guide
-                you through legal procedures and complete regulatory and
-                compliance-related work.
-              </p>
-            </div>
-          </div>
-          <div className="bg-yellow-50 p-5 rounded-lg border border-yellow-200">
-            <div className="flex items-start">
-              <AlertTriangle className="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-800">
-                <span className="font-semibold">Important:</span> Clients are
-                advised to consult professionals if they need specialized
-                guidance.
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Section 8 Company registration</li>
+            <li>Society and Trust registration</li>
+            <li>12A & 80G registrations</li>
+            <li>FCRA application and advisory</li>
+            <li>CSR-1 filing</li>
+            <li>Annual compliance</li>
+            <li>And more</li>
+          </ul>
+          <p>
+            We act as a facilitator, guiding you through the legal and
+            procedural steps involved in running an NGO. Our team comprises
+            professionals who understand the system and are committed to
+            making your compliance experience stress-free.
+          </p>
+          <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
+              <p>
+                We are not a law firm or a government body. We do not provide
+                legal opinions or represent you in court. For deep legal or
+                financial advice, consult your lawyer or CA.
               </p>
             </div>
           </div>
@@ -90,276 +67,157 @@ export const termsAndConditionsData = {
     },
     {
       id: 2,
-      title: "Users Guidelines",
+      title: "Who Can Use Our Services?",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
-              <div className="flex items-center mb-3">
-                <Users className="w-5 h-5 text-[#59A245] mr-2" />
-                <h4 className="font-semibold text-gray-900">Eligibility</h4>
-              </div>
-              <p className="text-gray-700">
-                To access NGO Experts&apos;s resources and services, you must be
-                at least 18 years old and capable of entering into binding
-                contracts.
-              </p>
-            </div>
-            <div className="p-5 border border-red-100 rounded-lg bg-red-50">
-              <div className="flex items-center mb-3">
-                <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
-                <h4 className="font-semibold text-gray-900">
-                  Prohibited Activities
-                </h4>
-              </div>
-              <ul className="text-gray-700 space-y-2">
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">•</span>
-                  <span>
-                    Use of our services for illegal or fraudulent acts is
-                    strictly prohibited
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">•</span>
-                  <span>
-                    Offensive comments about any particular race or group
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-2">•</span>
-                  <span>Spreading misleading information</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-            <p className="text-gray-700 font-medium">
-              Violation of these guidelines may result in termination of access
-              without prior notice.
-            </p>
-          </div>
+        <div className="space-y-4 text-gray-700">
+          <p>To use our services, you must:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Be 18 years or older</li>
+            <li>Provide correct, updated, and honest information</li>
+            <li>Use our services for genuine, lawful purposes only</li>
+          </ul>
+          <p>
+            If we detect misuse, misrepresentation, or unethical activity, we
+            may cancel your service or restrict access without prior notice.
+          </p>
         </div>
       ),
     },
     {
       id: 3,
-      title: "Payment and Refund Policy",
+      title: "Payments and Refunds - Keeping It Fair",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <div className="space-y-4">
-            {[
-              {
-                icon: "💰",
-                title: "Refund Request Limit",
-                desc: "Refund requests are limited to one user, to prevent abuse.",
-              },
-              {
-                icon: "⏱️",
-                title: "Refund Timeframe",
-                desc: "If a user raises a refund request within 30 days of purchasing a service, NGO Experts will refund the amount within 7-10 business days.",
-              },
-              {
-                icon: "🔍",
-                title: "Verification Process",
-                desc: "Refunds shall only be processed after verification based on clearly visible proofs provided by the user.",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="border-l-4 border-green-500 pl-4 py-2">
-                <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">{item.icon}</span>
-                  <h4 className="font-semibold text-gray-900">{item.title}</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+        <div className="space-y-4 text-gray-700">
+          <div className="flex items-start gap-3">
+            <Scale className="w-5 h-5 text-[#59A245] mt-0.5" />
+            <p>
+              Our pricing is shared upfront. Before we begin work, full payment
+              is required. This covers professional charges and, in some cases,
+              government or third-party fees.
+            </p>
           </div>
-
-          <div className="bg-red-50 p-5 rounded-lg border border-red-200">
-            <h4 className="font-semibold text-gray-900 mb-2">
-              Non-Refundable Scenarios
-            </h4>
-            <div className="space-y-2">
-              <div className="flex items-start">
-                <span className="text-red-600 mr-2">✗</span>
-                <p className="text-gray-700">Change of mind after payment</p>
-              </div>
-              <div className="flex items-start">
-                <span className="text-red-600 mr-2">✗</span>
-                <p className="text-gray-700">
-                  Refund requests after 30 days of purchase
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="font-medium">Refund policy highlights:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Payments are non-refundable once work has started.</li>
+            <li>
+              If we are unable to proceed due to a policy change or an
+              unforeseen obstacle on our end, we will evaluate the case and
+              process a refund, typically within 7-10 business days.
+            </li>
+            <li>
+              If delays or rejections occur due to incorrect documents or
+              information provided by you, refunds are not available.
+            </li>
+          </ul>
+          <p>
+            We aim to be fair and reasonable. If there is an issue, please
+            reach out and we will try to resolve it.
+          </p>
         </div>
       ),
     },
     {
       id: 4,
-      title: "Service Timelines and Delays",
+      title: "Service Timelines - What to Expect",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="text-center p-6 border border-green-100 rounded-lg bg-green-50">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6 text-[#59A245]" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">
-                Prompt Processing
-              </h4>
-              <p className="text-gray-700">
-                NGO Experts aims to process returns and provide updates
-                promptly.
-              </p>
-            </div>
-            <div className="text-center p-6 border border-yellow-100 rounded-lg bg-yellow-50">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-6 h-6 text-yellow-600" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">
-                Third-Party Dependencies
-              </h4>
-              <p className="text-gray-700">
-                Since we depend on third-party service providers, we cannot
-                guarantee completion within estimated time.
-              </p>
-            </div>
+        <div className="space-y-4 text-gray-700">
+          <div className="flex items-start gap-3">
+            <Clock className="w-5 h-5 text-[#59A245] mt-0.5" />
+            <p>
+              We provide estimated timelines, not fixed deadlines. Delays may
+              happen due to government departments, portals, or verification
+              steps. We will inform you as early as possible if delays arise.
+            </p>
           </div>
+          <p>
+            While we follow up and push things forward, we cannot control
+            external authorities or guarantee approvals.
+          </p>
         </div>
       ),
     },
     {
       id: 5,
-      title: "Client Responsibilities",
+      title: "What We Expect From You",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-4">
-            {[
-              {
-                title: "Timely Responses",
-                desc: "Clients must ensure they respond to any queries regarding their application promptly.",
-                icon: "📝",
-              },
-              {
-                title: "Accurate Information",
-                desc: "Any document errors or incorrect information may lead to service rejection, extra costs, or penalties.",
-                icon: "✅",
-              },
-              {
-                title: "Data Accuracy",
-                desc: "Clients are responsible for providing correct and complete information for all applications.",
-                icon: "📋",
-              },
-              {
-                title: "Consequences",
-                desc: "NGO Experts cannot be held responsible for losses or issues due to faulty data provided by the client.",
-                icon: "⚠️",
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="p-4 border border-gray-200 rounded-lg">
-                <div className="flex items-center mb-2">
-                  <span className="text-xl mr-3">{item.icon}</span>
-                  <h4 className="font-semibold text-gray-900">{item.title}</h4>
-                </div>
-                <p className="text-gray-700 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+        <div className="space-y-4 text-gray-700">
+          <p>To keep things smooth and fast, please:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Submit required documents correctly and in requested formats</li>
+            <li>Double-check spelling, names, PAN, addresses, and numbers</li>
+            <li>Respond promptly to our queries, emails, or calls</li>
+            <li>
+              Stay engaged if government portals send OTPs or verification
+              emails to your phone or inbox
+            </li>
+          </ul>
+          <p>
+            If delays or rejections are caused by incorrect or incomplete
+            documents from your side, NGOExperts will not be liable.
+          </p>
         </div>
       ),
     },
     {
       id: 6,
-      title: "Users Limitations",
+      title: "Disclaimer & Limitation of Liability",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <div className="space-y-4">
-            <div className="p-5 border border-yellow-100 rounded-lg bg-yellow-50">
-              <div className="flex items-center mb-2">
-                <AlertTriangle className="w-5 h-5 text-yellow-600 mr-2" />
-                <h4 className="font-semibold text-gray-900">
-                  No Approval Guarantee
-                </h4>
-              </div>
-              <p className="text-gray-700">
-                We do not guarantee that applications will always be approved,
-                as this depends on government verification and approval.
-              </p>
-            </div>
-            <div className="p-5 border border-red-100 rounded-lg bg-red-50">
-              <div className="flex items-center mb-2">
-                <span className="text-red-600 font-bold mr-2">⚠️</span>
-                <h4 className="font-semibold text-gray-900">User Liability</h4>
-              </div>
-              <p className="text-gray-700">
-                Users are solely responsible for any penalties, rejections, or
-                legal consequences due to incorrect filings of data.
-              </p>
-            </div>
-            <div className="p-5 border border-gray-200 rounded-lg bg-gray-50">
-              <div className="flex items-center mb-2">
-                <span className="text-gray-600 font-bold mr-2">⛔</span>
-                <h4 className="font-semibold text-gray-900">
-                  No Financial Compensation
-                </h4>
-              </div>
-              <p className="text-gray-700">
-                We do not provide financial compensation for any losses caused
-                due to delays in regulatory approvals.
-              </p>
-            </div>
+        <div className="space-y-4 text-gray-700">
+          <p>
+            We facilitate NGO-related work, but we are not responsible for final
+            approvals. Those decisions lie with regulatory authorities (e.g.,
+            MCA, Income Tax Department).
+          </p>
+          <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+            <p className="font-medium">We are not liable for:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-2">
+              <li>Delays in application approvals</li>
+              <li>Technical issues on government portals</li>
+              <li>Penalties due to late filings caused by delayed client response</li>
+              <li>Rejections caused by data mismatch or missing documents</li>
+            </ul>
           </div>
+          <p>
+            We cannot offer financial compensation for losses arising from the
+            above scenarios.
+          </p>
         </div>
       ),
     },
     {
       id: 7,
-      title: "Privacy and Data Security",
+      title: "Your Data & Privacy",
       expandable: true,
       content: (
-        <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
-              <div className="flex items-center mb-3">
-                <Lock className="w-5 h-5 text-[#59A245] mr-2" />
-                <h4 className="font-semibold text-gray-900">Data Protection</h4>
-              </div>
-              <p className="text-gray-700">
-                Any personal or business data you share with us is protected and
-                confidential. We use this data only to provide services, not
-                sell or misuse.
-              </p>
-            </div>
-            <div className="p-5 border border-green-100 rounded-lg bg-green-50">
-              <div className="flex items-center mb-3">
-                <Shield className="w-5 h-5 text-[#59A245] mr-2" />
-                <h4 className="font-semibold text-gray-900">
-                  Account Security
-                </h4>
-              </div>
-              <p className="text-gray-700">
-                Clients are responsible for keeping their login credentials
-                secure and should not share their account details with anyone.
-              </p>
-            </div>
-          </div>
-          <div className="bg-green-50 p-5 rounded-lg border border-green-100">
-            <p className="text-gray-900">
-              For more details, please read our{" "}
-              <Link
-                href="/privacy-policy"
-                className="text-[#59A245] font-semibold hover:underline"
-              >
-                Privacy Policy
-              </Link>
+        <div className="space-y-4 text-gray-700">
+          <div className="flex items-start gap-3">
+            <Lock className="w-5 h-5 text-[#59A245] mt-0.5" />
+            <p>
+              We take your data seriously. Any personal, financial, or
+              organizational information you share is kept confidential, used
+              only for delivering our services, and never sold or misused.
             </p>
           </div>
+          <p>
+            While we use secure systems, we are not liable for cyber threats,
+            hacks, or data breaches caused by third-party platforms like payment
+            gateways, government portals, or hosting providers.
+          </p>
+          <p>
+            For more details, please read our{" "}
+            <Link
+              href="/privacy-policy"
+              className="text-[#59A245] font-semibold hover:underline"
+            >
+              Privacy Policy
+            </Link>
+            .
+          </p>
         </div>
       ),
     },
@@ -367,27 +225,9 @@ export const termsAndConditionsData = {
   staticSections: [
     {
       id: 8,
-      title: "Rules and Violations",
-      content:
-        "Users must not misuse the platform or bypass security measures. Prohibited conduct includes: Providing false data, Unauthorized sharing of account credentials, Uploading malicious code. Violations may result in suspension or termination of services, without refund.",
-    },
-    {
-      id: 9,
-      title: "Breaching and Infringement",
-      content:
-        "We strictly adhere to the regulations of intellectual property rights while maintaining a DMCA-compliant policy. Restrictions: Clients cannot copy, reuse, or distribute our content, including text, images, logos, and service descriptions, without permission. Action Taken: We will promptly act to remove infringing content, thereby suspending the particular user's account.",
-    },
-    {
-      id: 10,
-      title: "Use of Third-Party Services",
-      content:
-        "Our services may involve external platforms, payment gateways, or government portals. Third-Party Dependencies: If a third-party service provider changes their policies, increases fees, or experiences downtime, NGO Experts cannot be held responsible for any inconvenience caused to the client. Client Responsibility: Clients must comply with the terms and conditions of these third-party service providers when using their platforms.",
-    },
-    {
-      id: 11,
       title: "Policy Updates and Modifications",
       content:
-        "Important Note: NGO Experts reserves the right to update, modify, suspend, or discontinue any of these terms at any time, with or without notice. Notification: If changes in policy are crucial, we will attempt to notify users 30 days in advance via email or WhatsApp notifications.",
+        "We may update, modify, or discontinue these terms at any time. Significant changes will be communicated where possible.",
     },
   ],
   contactInfo: {
@@ -397,8 +237,8 @@ export const termsAndConditionsData = {
     items: [
       {
         title: "Website",
-        value: "NGO Experts.com",
-        href: "https://NGO Experts.com",
+        value: "ngoexperts.com",
+        href: "https://ngoexperts.com",
       },
       {
         title: "Email",
@@ -407,6 +247,7 @@ export const termsAndConditionsData = {
       },
       { title: "Phone", value: "+91-8929218091", href: "tel:+918929218091" },
     ],
-    note: "Address: NGO Experts Consulting Private Limited, 1117, Supertech Astralis, Sec-94, Noida, Uttar Pradesh-201301, India",
+    note:
+      "Address: NGO Experts Consulting Private Limited, 1117, Supertech Astralis, Sec-94, Noida, Uttar Pradesh-201301, India",
   },
 };
