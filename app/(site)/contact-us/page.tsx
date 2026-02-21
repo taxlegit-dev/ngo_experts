@@ -1,8 +1,34 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/pages/common/contactForm";
 import { Phone, MapPin, Mail } from "lucide-react";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Contact Us | NGO Experts - Get Expert Assistance for Your NGO",
+  description:
+    "Have questions about NGO registration, compliance, or funding? Contact NGO Experts today for expert guidance and support. We're here to help your NGO succeed!",
+  alternates: {
+    canonical: "https://ngoexperts.com/contact-us",
+  },
+  openGraph: {
+    url: "https://ngoexperts.com/contact-us",
+    type: "website",
+    title: "Contact Us | NGO Experts - Get Expert Assistance for Your NGO",
+    description:
+      "Have questions about NGO registration, compliance, or funding? Contact NGO Experts today for expert guidance and support. We're here to help your NGO succeed!",
+  },
+  twitter: {
+    title: "Contact Us | NGO Experts - Get Expert Assistance for Your NGO",
+    description:
+      "Have questions about NGO registration, compliance, or funding? Contact NGO Experts today for expert guidance and support. We're here to help your NGO succeed!",
+  },
+  other: {
+    "twitter:domain": "ngoexperts.com",
+    "twitter:url": "https://ngoexperts.com/contact-us",
+  },
+};
 
 export default function AboutCompanyHero() {
   return (

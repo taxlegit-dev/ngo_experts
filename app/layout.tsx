@@ -7,12 +7,6 @@ import { Suspense } from "react";
 import Script from "next/script";
 import GoogleAnalytics from "@/components/Integration/GoogleAnalytics";
 
-export const metadata: Metadata = {
-  title: "NGO Experts | Compliance and Registration",
-  description:
-    "Region-aware legal, tax and compliance workflows for India and the United States.",
-  metadataBase: new URL("https://ngoexperts.com"),
-};
 
 export default async function RootLayout({
   children,

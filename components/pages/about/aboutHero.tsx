@@ -6,7 +6,7 @@ export default function AboutCompanyHero() {
     <section className="relative h-[400px] w-full overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/about/abouthero.png" // 👉 replace with your image path
+        src="/about/abouthero.webp" // 👉 replace with your image path
         alt="About Company"
         fill
         priority
@@ -36,12 +36,12 @@ export default function AboutCompanyHero() {
               Home
             </Link>
             <span className="mx-2">››</span>
-            <span className="text-white">About Ngo Experts</span>
+            <span className="text-white">About Us</span>
           </nav>
 
           {/* Heading */}
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-            About Ngo Experts
+            About Us
           </h1>
         </div>
       </div>

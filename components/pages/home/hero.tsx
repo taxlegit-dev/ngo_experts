@@ -97,12 +97,12 @@ export default function CTA() {
             </motion.button>
 
             <motion.a
-              href="tel:+919999999999"
+              href="tel:+918810445899"
               className="rounded-full border-2 border-[#59A245] px-10 py-4 text-base font-semibold text-black transition-all hover:bg-[#59A245]/10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Call Us Now
+            Call Us Now
             </motion.a>
           </div>
         </motion.div>

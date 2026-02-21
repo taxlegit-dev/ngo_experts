@@ -6,7 +6,7 @@ import HowItWork from "@/components/pages/home/HowWeWorkSection";
 import RecentBlogsSection from "@/components/pages/home/RecentBlogsSection";
 // import WhyChooseTaxlegit from "@/components/pages/home/WhyTaxlegit";
 import Footer from "@/components/footer";
-import AboutUsSection from "@/components/pages/about/AboutTaxlegit";
+import AboutUsSection from "@/components/pages/about/AboutNgoexperts";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
