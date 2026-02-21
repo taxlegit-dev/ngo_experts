@@ -1,11 +1,21 @@
 export const dynamic = "force-dynamic";
 
+import type { Metadata } from "next";
 import { Region, ContentStatus } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import Footer from "@/components/footer";
 import BlogHero from "@/components/pages/Blog/BlogHero";
 import FeaturedBlog from "@/components/pages/Blog/FeaturedBlog";
 import BlogGroups from "@/components/pages/Blog/BlogGroups";
+
+export const metadata: Metadata = {
+  title: "NGO Blog - Latest Updates on NGO Registration, Compliance & Funding",
+  description:
+    "Explore expert-written blogs on NGO formation, Section 8 company registration, compliance tips, government schemes, and legal advice - all in one place at NGOExperts.",
+  alternates: {
+    canonical: "https://ngoexperts.com/blogs",
+  },
+};
 
 type BlogListingPageProps = {
   searchParams?: Promise<{

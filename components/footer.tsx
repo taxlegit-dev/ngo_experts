@@ -46,10 +46,6 @@ const Footer = () => {
       name: "FCRA Registration",
       href: "/fcra-registration",
     },
-    {
-      name: "Trademark Registration",
-      href: "/trademark-registration-ngo",
-    },
   ];
 
   const popularLicenses = [

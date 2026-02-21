@@ -61,12 +61,12 @@ export default function CTA() {
             Ready to Start?
           </motion.span>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
             First Step Toward &apos;s&nbsp;
             <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent animate-gradient-text">
               Sustanable Future
             </span>
-          </h2>
+          </h1>
 
           <p className="mt-3 text-base md:text-lg text-slate-900 font-medium max-w-2xl mx-auto leading-relaxed">
             Join 500+ NGOs who trust us with their registration and compliance.
