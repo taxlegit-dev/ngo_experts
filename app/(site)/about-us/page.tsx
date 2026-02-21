@@ -7,6 +7,7 @@ import RecentBlogsSection from "@/components/pages/home/RecentBlogsSection";
 // import WhyChooseTaxlegit from "@/components/pages/home/WhyTaxlegit";
 import Footer from "@/components/footer";
 import AboutUsSection from "@/components/pages/about/AboutTaxlegit";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -19,6 +20,7 @@ export default function AboutPage() {
         {/* <Ceo /> */}
         {/* <WhyChooseTaxlegit /> */}
         <RecentBlogsSection />
+        <MailchimpSection />
         <Footer />
       </div>
     </div>

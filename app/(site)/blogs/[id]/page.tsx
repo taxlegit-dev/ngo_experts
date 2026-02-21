@@ -10,6 +10,7 @@ import { parseMetaBlockForMetadata } from "@/lib/seo-utils";
 import AuthorCard from "@/components/pages/Blog/AuthorCard";
 import RecentBlogsSection from "@/components/pages/home/RecentBlogsSection";
 import { BlogViewCounter } from "@/components/pages/Blog/BlogViewCounter";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 
 const FALLBACK_BLOG_IMAGE_SRC = "/hero1.jpg";
 
@@ -288,6 +289,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           <RecentBlogsSection />
         </main>
 
+        <MailchimpSection />
         <Footer />
       </div>
     </>

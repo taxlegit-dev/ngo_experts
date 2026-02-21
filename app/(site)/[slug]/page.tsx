@@ -15,6 +15,7 @@ import Footer from "@/components/footer";
 import { parseMetaBlockForMetadata } from "@/lib/seo-utils";
 import { getRelatedBlogsCached } from "@/lib/query/related-blogs";
 import { RelatedBlogsSection } from "@/components/related-blogs/RelatedBlogsSection";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 
 /* -------------------------------------------------
    ISR
@@ -301,6 +302,7 @@ export default async function ServicePage({ params, searchParams }: PageProps) {
           )}
         </main>
 
+        <MailchimpSection />
         <Footer />
       </div>
     </>

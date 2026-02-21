@@ -12,6 +12,7 @@ import Footer from "@/components/footer";
 // import OurProduct from "@/components/pages/home/OurProduct";
 import MediaMentions from "@/components/pages/common/MediaMentions";
 import OurClients from "@/components/pages/home/OurClient";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 export default async function IndiaHomePage() {
   const region = Region.INDIA;
 
@@ -47,6 +48,7 @@ export default async function IndiaHomePage() {
         {faq && faq.questions.length > 0 && (
           <FAQSection questions={faq.questions} region="INDIA" />
         )}
+        <MailchimpSection />
         <Footer />
       </div>
     </div>

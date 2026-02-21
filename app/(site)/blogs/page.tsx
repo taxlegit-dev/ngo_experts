@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import BlogHero from "@/components/pages/Blog/BlogHero";
 import FeaturedBlog from "@/components/pages/Blog/FeaturedBlog";
 import BlogGroups from "@/components/pages/Blog/BlogGroups";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 
 type BlogListingPageProps = {
   searchParams?: Promise<{
@@ -62,6 +63,7 @@ export default async function BlogListingPage({
           </>
         )}
       </main>
+      <MailchimpSection />
       <Footer />
     </div>
   );

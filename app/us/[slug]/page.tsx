@@ -9,6 +9,7 @@ import { GenericPageView } from "@/components/generic-page/generic-page-view";
 import { FAQSection } from "@/components/faq/faq-section";
 import { parseMetaBlockForMetadata } from "@/lib/seo-utils";
 import Footer from "@/components/footer";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 
 const normalizeSlug = (value: string) => value.replace(/^\/+/, "");
 
@@ -289,6 +290,7 @@ export default async function UsDynamicPage({ params }: DynamicPageProps) {
             <FAQSection questions={faq.questions} region="US" />
           )}
         </main>
+        <MailchimpSection />
         <Footer></Footer>
       </div>
     </>

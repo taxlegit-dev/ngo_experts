@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactForm from "@/components/pages/common/contactForm";
 import { Phone, MapPin, Mail } from "lucide-react";
 import Footer from "@/components/footer";
+import MailchimpSection from "@/components/pages/common/MailchimpSection";
 
 export default function AboutCompanyHero() {
   return (
@@ -122,6 +123,7 @@ export default function AboutCompanyHero() {
           </div>
         </div>
       </section>
+      <MailchimpSection />
       <Footer />
     </div>
   );
