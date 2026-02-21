@@ -12,6 +12,17 @@ import Footer from "@/components/footer";
 // import OurProduct from "@/components/pages/home/OurProduct";
 import MediaMentions from "@/components/pages/common/MediaMentions";
 import OurClients from "@/components/pages/home/OurClient";
+
+export const metadata = {
+  title: "NGO Experts | Compliance and Registration",
+  description:
+    "Region-aware legal, tax and compliance workflows for India and the United States.",
+  metadataBase: new URL("https://ngoexperts.com"),
+  alternates: {
+    canonical: "https://ngoexperts.com",
+  },
+};
+
 export default async function IndiaHomePage() {
   const region = Region.INDIA;
 

@@ -47,7 +47,7 @@ export default function AIGenerator() {
           <input
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
-            placeholder="How to register a private limited company?"
+            placeholder="How to register an NGO in India?"
             className="flex-1 min-w-0 px-5 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
@@ -56,7 +56,7 @@ export default function AIGenerator() {
             disabled={isLoading}
             className="w-full sm:w-auto sm:min-w-[150px] px-7 py-3 rounded-xl bg-[#59A245] text-white hover:bg-green-700 disabled:opacity-60"
           >
-            {isLoading ? "Generating..." : "AI Overview ✨"}
+            {isLoading ? "Generating..." : "NGO AI Overview"}
           </button>
         </div>
 
@@ -100,3 +100,4 @@ export default function AIGenerator() {
     </section>
   );
 }
+

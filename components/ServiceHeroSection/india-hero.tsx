@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { Handshake, Scale, Building2 } from "lucide-react";
+import { Handshake, FileCheck, Landmark } from "lucide-react";
 import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import type { PageHero } from "@prisma/client";
@@ -26,16 +26,16 @@ const stats = [
     Icon: Handshake,
   },
   {
-    label: "Company Registered",
+    label: "NGOs Registered",
     value: 500,
     suffix: "+",
-    Icon: Scale,
+    Icon: FileCheck,
   },
   {
-    label: " Gov Registation",
+    label: "Govt Registrations",
     value: 3499,
     suffix: "+",
-    Icon: Building2,
+    Icon: Landmark,
   },
 ];
 

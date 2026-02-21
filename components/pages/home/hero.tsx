@@ -61,12 +61,12 @@ export default function CTA() {
             Ready to Start?
           </motion.span>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
             First Step Toward &apos;s&nbsp;
             <span className="bg-gradient-to-r from-[#59A245] via-[#65a30d] to-[#166534] bg-clip-text text-transparent animate-gradient-text">
               Sustanable Future
             </span>
-          </h2>
+          </h1>
 
           <p className="mt-3 text-base md:text-lg text-slate-900 font-medium max-w-2xl mx-auto leading-relaxed">
             Join 500+ NGOs who trust us with their registration and compliance.
@@ -97,12 +97,12 @@ export default function CTA() {
             </motion.button>
 
             <motion.a
-              href="tel:+919999999999"
+              href="tel:+918810445899"
               className="rounded-full border-2 border-[#59A245] px-10 py-4 text-base font-semibold text-black transition-all hover:bg-[#59A245]/10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Call Us Now
+            Call Us Now
             </motion.a>
           </div>
         </motion.div>
